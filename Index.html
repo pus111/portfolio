@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미래교육원</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      li {
+        list-style: none;
+      }
+
+      /* Main Visual */
+      .main-visual {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../FutureEducationCenter/img/s_visual_bg2.jpg");
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 140px;
+      }
+
+      /* Header */
+      .main-header {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        /* background: rgba(0, 0, 0, 0.5); */
+        background: rgba(31, 53, 113, 0.5);
+      }
+
+      /*미래교육원 로고*/
+      .logo {
+        margin-top: 20px;
+        /* margin-right: 100px; */
+        margin-left: 100px;
+      }
+
+      /*어린이이미지*/
+      .imgbox img {
+        width: 1200px;
+        border-radius: 200px;
+        object-fit: cover;
+      }
+
+      .text-box {
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      .text-box h2 {
+        font-size: 40px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .text-box h2 span {
+        font-size: 50px;
+        color: #ffd800;
+        font-weight: 900;
+      }
+
+      .text-box p {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      /*메뉴 오른쪽*/
+      .menu-right {
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 10px;
+      }
+      .menu-right ul {
+        display: flex;
+        gap: 20px;
+      }
+      .menu-right ul li a {
+        color: #fff;
+        text-decoration: none; /*밑줄 삭제*/
+      }
+      .menu-center {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* 메뉴 a 스타일 */
+      .menu-center li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        white-space: nowrap;
+        display: inline-block;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img
+          src="../FutureEducationCenter/img/logo_mix.png"
+          alt="미래교육원로고"
+        />
+      </div>
+      <div class="menu">
+        <div class="menu-right">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+          </ul>
+        </div>
+        <nav class="center">
+          <ul class="menu-center">
+            <li><a href="#">미래교육원 소개</a></li>
+            <li><a href="#">체험예약</a></li>
+            <li><a href="#">체험안내</a></li>
+            <li><a href="#">커뮤니티</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="main-visual">
+      <div class="text-box">
+        <h2>
+          우리 아이들이 즐거움을<br />배우고, 알려주는 <span>미래교육원</span>
+        </h2>
+        <p>
+          경상남도교육청 미래교육원에 오신걸 환영합니다.<br />
+          즐거움을 배울 수 있는 곳으로 함께 가요!
+        </p>
+      </div>
+      <div class="imgbox">
+        <img src="../FutureEducationCenter/img/child.png" alt="어린이이미지" />
+      </div>
+    </section>
+  </body>
+</html>
