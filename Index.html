@@ -14,18 +14,18 @@
         list-style: none;
       }
 
-      /* Main Visual */
+      /* Main Visual css */
       .main-visual {
         width: 100%;
         height: 100vh;
-        background-image: url("../FutureEducationCenter/img/s_visual_bg2.jpg");
+        background-image: url("./img/s_visual_bg2.jpg");
         position: relative;
         display: flex;
         align-items: center;
         padding-left: 140px;
       }
 
-      /* Header */
+      /* Header css */
       .main-header {
         width: 100%;
         height: 100px;
@@ -41,14 +41,14 @@
         background: rgba(31, 53, 113, 0.5);
       }
 
-      /*미래교육원 로고*/
+      /*미래교육원 로고 css*/
       .logo {
         margin-top: 20px;
         /* margin-right: 100px; */
         margin-left: 100px;
       }
 
-      /*어린이이미지*/
+      /*어린이이미지 css*/
       .imgbox img {
         width: 1200px;
         border-radius: 200px;
@@ -80,7 +80,7 @@
         line-height: 1.6;
       }
 
-      /*메뉴 오른쪽*/
+      /*메뉴 오른쪽 css*/
       .menu-right {
         display: flex;
         justify-content: flex-end;
@@ -104,7 +104,7 @@
         margin: 0;
       }
 
-      /* 메뉴 a 스타일 */
+      /* 메뉴 a 스타일 css */
       .menu-center li a {
         color: #fff;
         text-decoration: none;
@@ -113,6 +113,37 @@
         white-space: nowrap;
         display: inline-block;
       }
+      /*container css*/
+      .news {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box;
+        height: 85px;
+        padding-top: 30px;
+      }
+
+      .news .news_tit {
+        display: inline-block;
+        vertical-align: top;
+        white-space: nowrap; /*강제 줄방꿈 방지*/
+        font-weight: 700;
+        color: #222;
+        font-size: 30px;
+        margin-right: 40px;
+        margin-left: 25px;
+      }
+      .news .news_txt {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap; /*강제 줄방꿈 방지*/
+        font-weight: 500;
+        color: #222;
+        font-size: 20px;
+      }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
@@ -120,10 +151,7 @@
     <!-- top -->
     <header class="main-header">
       <div class="logo">
-        <img
-          src="../FutureEducationCenter/img/logo_mix.png"
-          alt="미래교육원로고"
-        />
+        <img src="./img/logo_mix.png" alt="미래교육원로고" />
       </div>
 
       <div class="menu">
@@ -156,10 +184,17 @@
         </p>
       </div>
       <div class="imgbox">
-        <img src="../FutureEducationCenter/img/child.png" alt="어린이이미지" />
+        <img src="./img/child.png" alt="어린이이미지" />
       </div>
     </section>
 
     <!--container-->
+    <div class="news">
+      <img src="./img/icon_loudspeaker.png" alt="" />
+      <span class="news_tit"> 미래교육 체험누리집 공지사항 </span>
+      <span class="news_txt">
+        미래교육원 디지털·에듀테크 리치 메카대전 행사 개최 안내</span
+      >
+    </div>
   </body>
 </html>
