@@ -13,7 +13,9 @@
       li {
         list-style: none;
       }
-
+      a {
+        text-decoration: none;
+      }
       /* Main Visual css */
       .main-visual {
         width: 100%;
@@ -159,24 +161,68 @@
         width: 18px;
         height: auto;
       }
-/*card css*/
-.card{
-  background-image: url("./img/s_h3_bg1.png");
-  width: 350px;
-  height: 500px;
-  margin: 30px 20px;
-  padding: 30px 50px;
-  background-repeat: no-repeat;
-   background-size: contain; 
-}
-.card h2{
-margin-bottom: 20px;
-}
 
-.card ul li img{
-  width: 50px;
-  height: 50px;
-}
+      /*Online css*/
+      .Online {
+        /* display: flex; */
+        background: #a65aa3;
+        border-radius: 20px;
+        width: 330px;
+        height: 250px;
+      }
+      .Online h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #fff;
+        padding: 20px 30px;
+        text-align: center;
+      }
+
+      /*회차별 접수 css*/
+      .time li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 14px;
+      }
+      .time li.closed a {
+        width: 70px;
+        height: 25px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        background: #d2d0d0;
+      }
+      .time li.open a {
+        width: 70px;
+        height: 25px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        background: #adca37;
+      }
+      .time li.wait a {
+        width: 70px;
+        height: 25px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        background: #adca37;
+      }
+      /* 이용안내 scc */
+      .watch {
+        width: 600px;
+        height: 400px;
+        background-color: aqua;
+        border-radius: 20px;
+      }
+      .watch h3 {
+        color: #fff;
+        padding: 20px 30px;
+        text-align: center;
+      }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
@@ -237,40 +283,56 @@ margin-bottom: 20px;
       </button>
     </div>
 
-<!--card-->
-    <section class="card"">
-      <h2>시간별 안내 사항 </h2>
-      <ul>
-        <li>
-          <img src="./img/ico_Viewing hours_1.png" alt="관람시간">
-          <div>
-            <strong>관람시간:</strong>
-            <span>10:00~17:30</span>
-          </div>
+    <!--Online 예약현황-->
+    <div class="Online">
+      <h3>온라인예약현황</h3>
+      <ul class="time">
+        <li class="closed">
+          <strong>1회차</strong>
+          <span>10:00 ~ 12:30</span>
+          <a href="#">마감</a>
         </li>
 
-        <li>
-          <img src="./img/ico_Closed days.png" alt="관람시간">
-          <div>
-            <strong>휴관일:</strong>
-            <span>법적공휴일 및 공지</span>
-          </div>
+        <li class="open">
+          <strong>2회차</strong>
+          <span>13:00 ~ 15:30</span>
+          <a href="#">접수중</a>
         </li>
 
-        <li>
-          <img src="./img/ico_lunch time.png" alt="관람시간">
-          <div>
-            <strong>점심시간:</strong>
-            <span>12:30~14:00</span>
-          </div>
+        <li class="wait">
+          <strong>3회차</strong>
+          <span>15:30 ~ 17::30</span>
+          <a href="#">접수중</a>
+        </li>
+        <p class="current">2025-11-26 오후 14:30</p>
+      </ul>
+    </div>
+
+    <!--watch 이용안내-->
+    <div class="watch">
+      <h3>이용안내</h3>
+      <ul class="col">
+        <li class="co1">
+          <strong>운영시간</strong>
+          <span>10:00 ~ 17:30</span>
+        </li>
+        <li class="co2">
+          <strong>관람료</strong>
+          <span>7~10세 4000원 / 19세 이상 5000원</span>
+        </li>
+        <li class="co3">
+          <strong>휴관일</strong>
+          <span>법정공휴일 및 공지</span>
+        </li>
+        <li class="co4">
+          <strong>운영방식</strong>
+          <span>회차별 운영 방침</span>
+        </li>
+        <li class="co5">
+          <strong>예매방법</strong>
+          <span>온라인예매</span>
         </li>
       </ul>
-      <div class="notice">
-      <span class="notice_tit"> 점심시간에는 직원이 없는 점 양해 부탁 드립니다 </span> <br>
-      <span class="notice_txt">
-      시간별 안내 사항을 확인해 주시고,<br> 혼란이 없을 수 있도록 부탁 드립니다</span
-      >
-      </div>
-    </section>
+    </div>
   </body>
 </html>
