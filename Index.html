@@ -113,7 +113,7 @@
         white-space: nowrap;
         display: inline-block;
       }
-      /*container css*/
+      /* container css*/
       .news {
         display: flex;
         justify-content: center;
@@ -124,26 +124,43 @@
         height: 85px;
         padding-top: 30px;
       }
-
+      /*공지사항이름*/
       .news .news_tit {
         display: inline-block;
         vertical-align: top;
-        white-space: nowrap; /*강제 줄방꿈 방지*/
+        white-space: nowrap;
         font-weight: 700;
         color: #222;
         font-size: 30px;
         margin-right: 40px;
         margin-left: 25px;
       }
+
+      /*공지사항 내용*/
       .news .news_txt {
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
-        white-space: nowrap; /*강제 줄방꿈 방지*/
+        white-space: nowrap;
         font-weight: 500;
         color: #222;
         font-size: 20px;
       }
+
+      /* 화살표 버튼 */
+      .arrow {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .arrow img {
+        width: 18px;
+        height: auto;
+      }
+
+     
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
@@ -190,11 +207,21 @@
 
     <!--container-->
     <div class="news">
-      <img src="./img/icon_loudspeaker.png" alt="" />
+      <img src="./img/icon_loudspeaker.png" alt="공지사항이미지" />
       <span class="news_tit"> 미래교육 체험누리집 공지사항 </span>
       <span class="news_txt">
         미래교육원 디지털·에듀테크 리치 메카대전 행사 개최 안내</span
       >
+      <button class="arrowleft">
+        <img src="./img/ico_arrow_left.png" alt="왼쪽화살표" />
+      </button>
+
+      <button class="_arrowright">
+        <img src="./img/ico_arrow_right.png" alt="오른쪽화살표" />
+      </button>
+    </div>
+
+    
     </div>
   </body>
 </html>
