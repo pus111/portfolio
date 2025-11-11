@@ -167,8 +167,10 @@
         /* display: flex; */
         background: #a65aa3;
         border-radius: 20px;
-        width: 330px;
+        width: 400px;
         height: 250px;
+        margin-bottom: 50px;
+        margin-top: 50px;
       }
       .Online h3 {
         font-size: 30px;
@@ -211,17 +213,44 @@
         font-size: 15px;
         background: #adca37;
       }
+      .time .cur {
+        text-align: center;
+      }
       /* 이용안내 scc */
       .watch {
-        width: 600px;
+        width: 400px;
         height: 400px;
-        background-color: aqua;
+        background-color: #3aa1da;
         border-radius: 20px;
+        padding: 20px;
+      }
+      .watch li {
+        display: flex;
+        padding: 10px 14px;
       }
       .watch h3 {
+        font-size: 30px;
         color: #fff;
         padding: 20px 30px;
         text-align: center;
+      }
+      .watch .col li.co1 p {
+        width: 90px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        background: #4c4d4f;
+        color: #fff;
+        text-align: center;
+        margin-right: 10px;
+      }
+      .watch .col li.co1 span {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+      }
+      .watch img {
       }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
@@ -304,7 +333,7 @@
           <span>15:30 ~ 17::30</span>
           <a href="#">접수중</a>
         </li>
-        <p class="current">2025-11-26 오후 14:30</p>
+        <p class="cur">2025-11-26 오후 14:30</p>
       </ul>
     </div>
 
@@ -313,26 +342,27 @@
       <h3>이용안내</h3>
       <ul class="col">
         <li class="co1">
-          <strong>운영시간</strong>
+          <p>운영시간</p>
           <span>10:00 ~ 17:30</span>
         </li>
         <li class="co2">
-          <strong>관람료</strong>
+          <p>관람료</p>
           <span>7~10세 4000원 / 19세 이상 5000원</span>
         </li>
         <li class="co3">
-          <strong>휴관일</strong>
+          <p>휴관일</p>
           <span>법정공휴일 및 공지</span>
         </li>
         <li class="co4">
-          <strong>운영방식</strong>
+          <p>운영방식</p>
           <span>회차별 운영 방침</span>
         </li>
         <li class="co5">
-          <strong>예매방법</strong>
+          <p>예매방법</p>
           <span>온라인예매</span>
         </li>
       </ul>
+      <img src="./img/watch_bg.png" alt="시계" />
     </div>
   </body>
 </html>
