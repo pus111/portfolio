@@ -281,6 +281,24 @@
         background: linear-gradient(135deg, #d4fc79, #96e6a1);
         border-radius: 20px;
       }
+
+      .item .icon img {
+        height: auto;
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+      .item .icon p {
+        justify-content: center;
+        font-size: 20px;
+        margin-left: 50px;
+      }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
@@ -341,7 +359,7 @@
       </button>
     </div>
 
-    <!--Online 예약현황-->
+    <!--온라인 예약현황-->
     <div class="Online">
       <h3>온라인예약현황</h3>
       <ul class="time">
@@ -366,7 +384,7 @@
       </ul>
     </div>
 
-    <!--watch 이용안내-->
+    <!-- 이용안내-->
     <div class="watch">
       <h3>이용안내</h3>
       <ul class="col">
@@ -400,23 +418,23 @@
     <!--메뉴박스-->
     <section class="meumbox">
       <div class="item">
-        <div class="icon1">
-          <p>체험예약</p>
+        <div class="icon">
           <img src="./img/menu_reserve.png" alt="체험예약" />
+          <p>체험예약</p>
         </div>
       </div>
 
       <div class="item">
-        <div class="icon2">
+        <div class="icon">
+          <img src="./img/menu_Reservation.png" alt="예약조회/취소" />
           <p>예약조회/취소</p>
-          <img src="./img/Reservation.png" alt="예약조회/취소" />
         </div>
       </div>
 
       <div class="item">
-        <div class="icon3">
-          <p>오시는 길</p>
+        <div class="icon">
           <img src="./img/menu_map.png" alt="오시는 길" />
+          <p>오시는 길</p>
         </div>
       </div>
     </section>
