@@ -218,7 +218,7 @@
       }
       /* 이용안내 scc */
       .watch {
-        width: 400px;
+        width: 410px;
         height: 400px;
         background-color: #3aa1da;
         border-radius: 20px;
@@ -226,7 +226,7 @@
       }
       .watch li {
         display: flex;
-        padding: 10px 14px;
+        padding: 10px 25px;
       }
       .watch h3 {
         font-size: 30px;
@@ -234,7 +234,7 @@
         padding: 20px 30px;
         text-align: center;
       }
-      .watch .col li.co1 p {
+      .watch .col li p {
         width: 90px;
         height: 30px;
         border-radius: 20px;
@@ -243,14 +243,43 @@
         background: #4c4d4f;
         color: #fff;
         text-align: center;
-        margin-right: 10px;
+        margin-right: 20px;
       }
-      .watch .col li.co1 span {
-        font-weight: 500;
+      .watch .col li.con1 p {
+        width: 90px;
+        height: 30px;
+        border-radius: 20px;
         font-size: 20px;
+        font-weight: 600;
+        background: red;
+        color: #fff;
         text-align: center;
+        margin-right: 20px;
       }
+      .watch .col li span {
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: 999;
+      }
+      .watch .col li.con1 span {
+        color: red;
+      }
+
       .watch img {
+        margin-left: 200px;
+      }
+
+      /*메뉴박스 css*/
+      .meumbox {
+        display: flex;
+        gap: 40px;
+      }
+      .meumbox .item {
+        height: 300px;
+        width: 200px;
+        background: linear-gradient(135deg, #d4fc79, #96e6a1);
+        border-radius: 20px;
       }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
@@ -341,28 +370,55 @@
     <div class="watch">
       <h3>이용안내</h3>
       <ul class="col">
-        <li class="co1">
+        <li>
           <p>운영시간</p>
           <span>10:00 ~ 17:30</span>
         </li>
-        <li class="co2">
+        <li>
           <p>관람료</p>
-          <span>7~10세 4000원 / 19세 이상 5000원</span>
+          <span
+            >7~10세 4000원 <br />
+            19세 이상 5000원</span
+          >
         </li>
-        <li class="co3">
+        <li class="con1">
           <p>휴관일</p>
           <span>법정공휴일 및 공지</span>
         </li>
-        <li class="co4">
+        <li>
           <p>운영방식</p>
           <span>회차별 운영 방침</span>
         </li>
-        <li class="co5">
+        <li>
           <p>예매방법</p>
           <span>온라인예매</span>
         </li>
       </ul>
       <img src="./img/watch_bg.png" alt="시계" />
     </div>
+
+    <!--메뉴박스-->
+    <section class="meumbox">
+      <div class="item">
+        <div class="icon1">
+          <p>체험예약</p>
+          <img src="./img/menu_reserve.png" alt="체험예약" />
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="icon2">
+          <p>예약조회/취소</p>
+          <img src="./img/Reservation.png" alt="예약조회/취소" />
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="icon3">
+          <p>오시는 길</p>
+          <img src="./img/menu_map.png" alt="오시는 길" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
