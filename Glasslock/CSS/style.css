@@ -213,15 +213,57 @@ section.visual h1 {
 }
 #max_footer {
   padding: 50px 0;
-}
-.gnb_inner {
-  margin: 0 auto;
-  max-width: 1720px;
-  position: relative;
-}
-#max_footer .gnb_inner img {
-  width: 150px;
-}
-.footer_info .add_box .fline {
+  background: #fff;
+  font-family: "Pretendard", sans-serif;
   font-size: 15px;
+}
+
+.gnb_inner {
+  max-width: 1720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* 왼쪽 구성 */
+.footer_left img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer_info .fline li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+/* 오른쪽 구성 */
+.footer_right {
+  text-align: right;
+}
+
+.link_sns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.link_sns img {
+  width: 25px;
+  height: 25px;
+}
+
+.family_site button {
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.copy {
+  font-size: 13px;
+  color: #666;
 }
