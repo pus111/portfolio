@@ -371,10 +371,9 @@ a {
 /* 배경 이미지 영역*/
 .secondwap {
   background: url("../img/m_reserve_bg2.png");
-  background-repeat: no-repeat; /*배경이미지 반복되는 방식을 결정 */
+  background-repeat: no-repeat;
   background-position: center top;
-  /*배경 이미지가 요소 안에서 어느 위치에 놓일지를 결정하는 속성 */
-  background-size: cover; /* 구름 배경 꽉 채우기 */
+  /background-size: cover;
   padding: 120px 100px 180px;
   text-align: center;
 }
