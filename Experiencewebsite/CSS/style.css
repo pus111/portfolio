@@ -382,7 +382,7 @@ a {
   background: url("../img/m_reserve_bg2.png");
   background-repeat: no-repeat;
   background-position: center top;
-  /background-size: cover;
+  background-size: cover;
   padding: 120px 100px 180px;
   text-align: center;
 }

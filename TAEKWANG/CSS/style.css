@@ -9,6 +9,14 @@ ul {
 a {
   text-decoration: none;
 }
+#wrap nav > ul {
+  display: flex;
+  gap: 40px;
+}
+#wrap nav > ul.menu {
+  font-size: 20px;
+  font-weight: bold;
+}
 section {
   height: 100vh;
   position: sticky;
