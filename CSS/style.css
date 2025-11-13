@@ -447,12 +447,12 @@ table {
   border-collapse: collapse;
 }
 
-td {
+.table td {
   padding: 6px 0;
   font-size: 15px;
 }
 
-td:last-child {
+.table td:last-child {
   text-align: right;
   color: #444;
 }
