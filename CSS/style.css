@@ -356,18 +356,27 @@ a {
   font-size: 20px;
 }
 
-/*로그존 css*/
-.text-wrap .title {
+/* 로그존 css */
+.titlewapp {
   display: flex;
   align-items: flex-end;
   padding-left: 350px;
-  margin-top: 20px;
+  margin-top: 100px;
   overflow: hidden;
 }
-.title img {
-  width: 100px;
-  height: 100px;
+.tit {
+  display: flex;
+  text-align: center;
 }
+.tit h1 {
+  font-size: 30px;
+}
+.tit img {
+  display: flex;
+  width: 450px;
+  height: 350px;
+}
+
 /* 배경 이미지 영역*/
 .secondwap {
   background: url("../img/m_reserve_bg2.png");
@@ -466,7 +475,6 @@ a:hover {
 }
 
 /*하단*/
-
 .footer {
   width: 100%;
   background: url("../img/footer_bg.png");
