@@ -373,7 +373,48 @@ a {
   width: 100%;
   display: none;
 }
+.leftwrap .left.active {
+  display: block;
+}
 
+.left .tit {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* 오른쪽 메뉴 */
+.right {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right ul li {
+  cursor: pointer;
+}
+
+/* 선택된 메뉴 강조 */
+.right ul li.on {
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* 이미지 스타일 */
+.conimg .desc {
+  display: inline-block;
+}
+
+.desc p img {
+  width: 250px;
+  height: 150px;
+}
 /*secondwap 소식통 백그라운드  */
 .secondwap {
   background: url("../img/m_reserve_bg2.png");
