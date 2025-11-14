@@ -201,6 +201,7 @@ a {
   width: 18px;
   height: auto;
 }
+/*watch,Online 부모 = con*/
 .con {
   width: 1200px;
   margin: 20px auto;
@@ -357,27 +358,28 @@ a {
 }
 
 /* 로그존 css */
-.titlewapp {
-  display: flex;
-  align-items: flex-end;
-  padding-left: 350px;
-  margin-top: 100px;
-  overflow: hidden;
+.mapwrap {
+  position: relative;
 }
-.tit {
+.leftwrap .left {
+  position: absolute;
+}
+.left .tit {
   display: flex;
   text-align: center;
 }
-.tit h1 {
-  font-size: 30px;
-}
-.tit img {
+.right ul {
   display: flex;
-  width: 450px;
-  height: 350px;
+  gap: 20px;
 }
-
-/* 배경 이미지 영역*/
+.conimg .desc {
+  display: inline;
+}
+.desc p img {
+  width: 250;
+  height: 150px;
+}
+/*secondwap 소식통 백그라운드  */
 .secondwap {
   background: url("../img/m_reserve_bg2.png");
   background-repeat: no-repeat;
@@ -387,7 +389,7 @@ a {
   text-align: center;
 }
 
-/* 제목 */
+/* 소식통 제목 */
 .second h2 {
   font-size: 36px;
   color: #fff;
@@ -412,7 +414,7 @@ a {
   margin-right: 30px;
 }
 
-/* 공지사항 카드 */
+/* 소식통 공지사항 카드 */
 .notice {
   background: #fff88a;
   border-radius: 20px;
@@ -422,7 +424,7 @@ a {
   text-align: left;
 }
 
-/* 후기 카드 */
+/* 이용후기 카드 */
 .Reviews {
   background: #7986f0;
   border-radius: 20px;
@@ -432,7 +434,7 @@ a {
   text-align: left;
 }
 
-/* 카드 제목 */
+/* 공지,이용 카드 제목 */
 .notice h2,
 .Reviews h2 {
   font-size: 22px;
@@ -446,10 +448,8 @@ a {
   display: inline-block;
   transition: 0.3s;
 }
-.notice h2 .icon:hover {
-}
 
-/* 표 스타일 */
+/*  표 스타일 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -465,7 +465,7 @@ table {
   color: #444;
 }
 
-/* 링크 스타일 */
+/*  링크 스타일 */
 a {
   text-decoration: none;
   color: #222;
