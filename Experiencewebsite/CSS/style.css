@@ -360,25 +360,20 @@ a {
 /* 로그존 css */
 .mapwrap {
   position: relative;
+  display: flex;
+}
+.leftwrap {
+  position: relative;
+  flex: 1;
 }
 .leftwrap .left {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
 }
-.left .tit {
-  display: flex;
-  text-align: center;
-}
-.right ul {
-  display: flex;
-  gap: 20px;
-}
-.conimg .desc {
-  display: inline;
-}
-.desc p img {
-  width: 250;
-  height: 150px;
-}
+
 /*secondwap 소식통 백그라운드  */
 .secondwap {
   background: url("../img/m_reserve_bg2.png");
