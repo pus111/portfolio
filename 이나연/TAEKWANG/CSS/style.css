@@ -81,6 +81,7 @@ section .txt p {
   width: 100%;
   padding: 120px 0;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
 /* 내용 컨테이너 */
@@ -175,14 +176,13 @@ section .txt p {
 }
 
 /*하단*/
-footer.foot {
+.footer {
   width: 100%;
   background: #fff;
   padding: 40px 0 60px;
   border-top: 1px solid #ddd;
 }
 
-/* 내부 정렬 */
 .foot-inner {
   max-width: 1400px;
   margin: 0 auto;
@@ -192,7 +192,7 @@ footer.foot {
 }
 
 /* 왼쪽 로고 */
-.leftlogo img {
+.footinner .leftlogo img {
   width: 240px;
 }
 
@@ -201,14 +201,14 @@ footer.foot {
   text-align: center;
 }
 
-.center .txt {
+.footer-txt {
   display: flex;
   gap: 25px;
   margin-bottom: 20px;
   justify-content: center;
 }
 
-.center .txt li a {
+.footer-txt li a {
   text-decoration: none;
   color: #444;
   font-size: 16px;
@@ -231,8 +231,4 @@ footer.foot {
   height: 28px;
   opacity: 0.9;
   transition: 0.3s;
-}
-
-.icon_sns img:hover {
-  opacity: 1;
 }
