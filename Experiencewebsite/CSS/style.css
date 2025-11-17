@@ -361,10 +361,12 @@ a {
 .mapwrap {
   position: relative;
   display: flex;
+  height: 500px;
 }
 .leftwrap {
   position: relative;
   flex: 1;
+  height: 100%;
 }
 .leftwrap .left {
   position: absolute;
@@ -373,7 +375,7 @@ a {
   width: 100%;
   display: none;
 }
-.leftwrap .left.active {
+.leftwrap .left .active {
   display: block;
 }
 
