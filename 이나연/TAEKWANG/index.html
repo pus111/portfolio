@@ -8,116 +8,97 @@
   </head>
 
   <body>
-    <!--헤더부분-->
-    <div id="header">
-      <div class="inner"></div>
-    </div>
-    <!--로고-->
-    <div class="logo">
-      <a href="#"
-        ><img src="../TAEKWANG/imges/header_logo_white.svg" alt="로고1"
-      /></a>
-    </div>
+    <!-- 헤더 -->
+    <header class="tk-header">
+      <div class="tk-inner">
+        <!-- 로고 -->
+        <a href="#" class="tk-logo">
+          <img src="../TAEKWANG/imges/header_logo_white.svg" alt="TAEKWANG" />
+        </a>
 
-    <nav class="gnb">
-      <ul class="menu">
-        <li><a href="#">태광그룹</a></li>
-        <li><a href="#">사업분야</a></li>
-        <li><a href="#">지속가능경영</a></li>
-        <li><a href="#">홍보센터</a></li>
-        <li><a href="#">인재채용</a></li>
-      </ul>
+        <!-- 메뉴 -->
+        <nav class="tk-gnb">
+          <ul class="tk-menu">
+            <li><a href="#">태광그룹</a></li>
+            <li><a href="#">사업분야</a></li>
+            <li><a href="#">지속가능경영</a></li>
+            <li><a href="#">홍보센터</a></li>
+            <li><a href="#">인재채용</a></li>
+          </ul>
+        </nav>
 
-      <ul class="right">
-        <li><a href="#">Business Groups</a></li>
-        <li><a href="#">KR</a></li>
-      </ul>
-    </nav>
-
-    <div>
-      <section>
-        <video muted autoplay loop>
-          <source src="../TAEKWANG/imges/main_visual_1_mo.mp4" />
-        </video>
-        <div class="txt">
-          <h1>
-            Connection the <br />
-            Future with Light
-          </h1>
-          <p>연결(Connection) 미래(Future) 빛(Light)</p>
+        <!-- 오른쪽 버튼 -->
+        <div class="tk-right">
+          <a href="#" class="tk-biz-btn">Business Groups</a>
+          <a href="#" class="tk-lang">KR</a>
         </div>
-      </section>
-      <section>
-        <video muted autoplay loop>
-          <source src="../TAEKWANG/imges/main_visual_2_mo.mp4" />
-        </video>
-        <div class="txt">
-          <h1>
-            Add Value to <br />
-            Your Everyday
-          </h1>
-          <p>가치(Value) 고객(Customer) 지속가능성(Sustainability)</p>
-        </div>
-      </section>
-      <section>
-        <video muted autoplay loop>
-          <source src="../TAEKWANG/imges/main_visual_3_mo.mp4" />
-        </video>
-        <div class="txt">
-          <h1>
-            Awaken<br />Imagination, <br />
-            Shape the Future
-          </h1>
-          <p>꿈(Dream) 희망(Hope) 열정(Passion)</p>
-        </div>
-      </section>
-      <section>
-        <video muted autoplay loop>
-          <source src="../TAEKWANG/imges/main_visual_4_mo.mp4" />
-        </video>
-        <div class="txt">
-          <h1>
-            Finally, A<br />‘big <br />
-            Forest’ Is <br />
-            Formed
-          </h1>
-          <p>숲과 함께 자라는 나무, 태광이 닮고 싶은 이름입니다</p>
-        </div>
-      </section>
-    </div>
+      </div>
+    </header>
 
-    <!--이미지 -->
+    <!-- 메인 영상 섹션 -->
+    <section class="hero">
+      <video muted autoplay loop>
+        <source src="../TAEKWANG/imges/main_visual_1_mo.mp4" />
+      </video>
+      <div class="hero-txt">
+        <h1>Connection the <br />Future with Light</h1>
+        <p>연결(Connection) 미래(Future) 빛(Light)</p>
+      </div>
+    </section>
 
+    <section class="hero">
+      <video muted autoplay loop>
+        <source src="../TAEKWANG/imges/main_visual_2_mo.mp4" />
+      </video>
+      <div class="hero-txt">
+        <h1>Add Value to <br />Your Everyday</h1>
+        <p>가치(Value) 고객(Customer) 지속가능성(Sustainability)</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <video muted autoplay loop>
+        <source src="../TAEKWANG/imges/main_visual_3_mo.mp4" />
+      </video>
+      <div class="hero-txt">
+        <h1>Awaken<br />Imagination, <br />Shape the Future</h1>
+        <p>꿈(Dream) 희망(Hope) 열정(Passion)</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <video muted autoplay loop>
+        <source src="../TAEKWANG/imges/main_visual_4_mo.mp4" />
+      </video>
+      <div class="hero-txt">
+        <h1>Finally, A<br />‘big Forest’ Is <br />Formed</h1>
+        <p>숲과 함께 자라는 나무, 태광이 닮고 싶은 이름입니다</p>
+      </div>
+    </section>
+
+    <!-- ESG 영역 -->
     <div class="esg">
       <div class="esg-inner">
-        <!-- 왼쪽 텍스트 영역 -->
         <div class="esg-left">
-          <h1 class="esg-title">
-            Sustainability<br />
-            Management
-          </h1>
-
+          <h1 class="esg-title">Sustainability<br />Management</h1>
           <h2 class="esg-subtitle">ESG경영</h2>
-
           <p class="esg-desc">
             ESG경영 실천을 위한 이해관계자 소통 강화,<br />
             <span>지속가능한 성장</span> 기반 마련
           </p>
-
           <a href="#" class="esg-arrow">→</a>
         </div>
 
-        <!-- 오른쪽 원형 이미지 -->
         <div class="esg-right">
           <div class="circle-img">
-            <img src="../TAEKWANG/imges/taek.jpg" alt="" />
+            <img src="../TAEKWANG/imges/taek.jpg" alt="ESG" />
             <div class="circle-text">ESG<br />Management</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!--하단-->
+    <!-- 푸터 -->
     <footer class="footer">
       <div class="foot-inner">
         <div class="leftlogo">
@@ -132,16 +113,12 @@
 
           <div class="copy-line">
             <p class="copy">Copyrights © Taekwang. All rights reserved.</p>
+            <div class="icon_sns">
+              <a href="#"><img src="../TAEKWANG/imges/icon_facebook.svg" /></a>
+              <a href="#"><img src="../TAEKWANG/imges/icon_youtube.svg" /></a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="icon_sns">
-        <a href="#"
-          ><img src="../TAEKWANG/imges/icon_facebook.svg" alt="페이스북"
-        /></a>
-        <a href="#"
-          ><img src="../TAEKWANG/imges/icon_youtube.svg" alt="유튜브"
-        /></a>
       </div>
     </footer>
   </body>
