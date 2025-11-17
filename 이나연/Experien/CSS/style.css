@@ -367,6 +367,7 @@ a {
 .leftwrap {
   position: relative;
   flex: 1;
+  min-height: 700px; /* 패널 높이 안정화 (옵션) */
 }
 
 /* left들을 전부 겹쳐놓고, active만 보이게 */
@@ -377,11 +378,11 @@ a {
   width: 100%;
   display: none;
 }
-
 .leftwrap .left.active {
   display: block;
 }
 
+/* 제목 */
 .left .tit {
   display: flex;
   flex-direction: column;
@@ -394,7 +395,12 @@ a {
   justify-content: center;
   align-items: center;
 }
-
+.left .txt {
+  display: flex; /* 가로 배치 */
+  flex-direction: row; /* 기본값이지만 명시해줌 */
+  align-items: center; /* 세로 가운데 정렬 */
+  gap: 12px; /* 제목과 설명 사이 간격 */
+}
 .right ul {
   display: flex;
   align-items: stretch;
@@ -417,10 +423,10 @@ a {
   color: #fff;
   font-weight: 700;
   background: linear-gradient(to bottom, #8ad4ff, #007bff);
-  border-radius: 4px; /* 필요 없으면 삭제 가능 */
+  border-radius: 4px;
 }
 
-/* 메뉴 사이에 세로 선 넣기 */
+/* 메뉴 사이에 세로 선 */
 .right ul li:not(:first-child)::before {
   content: "";
   width: 1px;
@@ -429,6 +435,13 @@ a {
   position: absolute;
   left: 0;
   top: 10%;
+}
+
+/* 🔥🔥 왼쪽 도면 이미지 크기 조절 (핵심 부분) 🔥🔥 */
+.conimg > p img {
+  width: 500px; /* 원하는 크기 */
+  height: auto; /* 비율 유지 */
+  display: block;
 }
 
 /*secondwap 소식통 백그라운드  */
