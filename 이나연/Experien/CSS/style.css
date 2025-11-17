@@ -361,13 +361,15 @@ a {
 .mapwrap {
   position: relative;
   display: flex;
-  height: 500px;
 }
+
+/* 왼쪽 영역 */
 .leftwrap {
   position: relative;
   flex: 1;
-  height: 100%;
 }
+
+/* left들을 전부 겹쳐놓고, active만 보이게 */
 .leftwrap .left {
   position: absolute;
   top: 0;
@@ -375,7 +377,8 @@ a {
   width: 100%;
   display: none;
 }
-.leftwrap .left .active {
+
+.leftwrap .left.active {
   display: block;
 }
 
@@ -388,35 +391,46 @@ a {
 /* 오른쪽 메뉴 */
 .right {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 40px;
 }
 
 .right ul {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: stretch;
+  gap: 0;
 }
 
 .right ul li {
+  height: 500px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
   cursor: pointer;
+  position: relative;
 }
 
-/* 선택된 메뉴 강조 */
+/* 선택된 메뉴(파란 그라데이션) */
 .right ul li.on {
+  color: #fff;
   font-weight: 700;
-  color: #007bff;
+  background: linear-gradient(to bottom, #8ad4ff, #007bff);
+  border-radius: 4px; /* 필요 없으면 삭제 가능 */
 }
 
-/* 이미지 스타일 */
-.conimg .desc {
-  display: inline-block;
+/* 메뉴 사이에 세로 선 넣기 */
+.right ul li:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 80%;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  top: 10%;
 }
 
-.desc p img {
-  width: 250px;
-  height: 150px;
-}
 /*secondwap 소식통 백그라운드  */
 .secondwap {
   background: url("../imges/m_reserve_bg2.png");
@@ -515,7 +529,7 @@ a:hover {
 /*하단*/
 .footer {
   width: 100%;
-  background: url("../imges/footer_bg.png");
+  background: url("../img/footer_bg.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
