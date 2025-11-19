@@ -138,6 +138,13 @@ a {
   display: block;
 }
 
+/*공지사항~카드뉴스 백그라운드 이미지*/
+.wrap {
+  background: url("../imges/star.png");
+  width: 1900px;
+  height: 640px;
+}
+
 /* container css*/
 .news {
   position: relative;
@@ -361,13 +368,18 @@ a {
 .mapwrap {
   position: relative;
   display: flex;
+  width: 1200px;
+  margin: 0 auto;
+
+  /* background: #e8f2ff; */
+  /* background: #f5f7fa; */
 }
 
 /* 왼쪽 영역 */
 .leftwrap {
   position: relative;
   flex: 1;
-  min-height: 700px; /* 패널 높이 안정화 (옵션) */
+  min-height: 700px;
 }
 
 /* left들을 전부 겹쳐놓고, active만 보이게 */
@@ -383,10 +395,16 @@ a {
 }
 
 /* 제목 */
-.left .tit {
+.left .txt {
   display: flex;
-  flex-direction: column;
-  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px;
+}
+.left .txt p {
+  font-size: 18px;
+  font: weight 500px;
+  padding: 20px;
 }
 
 /* 오른쪽 메뉴 */
@@ -395,12 +413,14 @@ a {
   justify-content: center;
   align-items: center;
 }
-.left .txt {
-  display: flex; /* 가로 배치 */
-  flex-direction: row; /* 기본값이지만 명시해줌 */
-  align-items: center; /* 세로 가운데 정렬 */
-  gap: 12px; /* 제목과 설명 사이 간격 */
-}
+
+/*디지로그,창의융합,나눔터*/
+/* .right .txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+} */
 .right ul {
   display: flex;
   align-items: stretch;
@@ -413,7 +433,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
 }
@@ -437,10 +457,9 @@ a {
   top: 10%;
 }
 
-/* 🔥🔥 왼쪽 도면 이미지 크기 조절 (핵심 부분) 🔥🔥 */
 .conimg > p img {
-  width: 500px; /* 원하는 크기 */
-  height: auto; /* 비율 유지 */
+  width: 500px;
+  height: auto;
   display: block;
 }
 
@@ -452,6 +471,7 @@ a {
   background-size: cover;
   padding: 120px 100px 180px;
   text-align: center;
+  position: relative;
 }
 
 /* 소식통 제목 */
@@ -514,6 +534,11 @@ a {
   transition: 0.3s;
 }
 
+.secimg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 /*  표 스타일 */
 table {
   width: 100%;

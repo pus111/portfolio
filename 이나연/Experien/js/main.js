@@ -18,6 +18,7 @@ gnb.forEach(function (v, k) {
 var tabBtns = document.querySelectorAll(".right ul li");
 var panels = document.querySelectorAll(".leftwrap .left");
 
+panels[0].classList.add("active");
 tabBtns.forEach(function (btn, index) {
   btn.addEventListener("click", function () {
     // 버튼 on 클래스 초기화
