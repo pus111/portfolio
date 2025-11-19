@@ -21,25 +21,6 @@
   text-align: center;
 }
 
-/* 폴더 아이콘 이미지 */
-.folder-icon img {
-  width: 150px;
-  transition: filter 0.3s ease, transform 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(83%) sepia(6%) saturate(300%) hue-rotate(314deg) brightness(96%) contrast(94%);
-  /* 기본 색상: #CBBDB9 톤과 비슷한 베이지톤 필터 */
-}
-
-/* Hover: 약간 더 진한 베이지 */
-.folder-icon:hover img {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(34%) saturate(320%) hue-rotate(4deg) brightness(95%) contrast(92%);
-  transform: translateY(-4px);
-}
-
-/* Active: 클릭 시 포인트 골드(#FFCB62 계열) 느낌 */
-.folder-icon:active img {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(62%) saturate(600%) hue-rotate(341deg) brightness(103%) contrast(99%);
-  transform: translateY(0);
-}
 
 /* 타이틀 */
 h1 {
@@ -86,14 +67,25 @@ footer {
   font-size: 14px;
   color: #666;
 }
-
+.st0{fill:#EF2525;}
+.iconcolor svg{
+  transform: scale(3); 
+}
 </style>
   <body>
     <div class="wrap">
       <!-- 폴더 아이콘 -->
       <div class="folder-icon">
-<div class="iconcolor">
-<img src="../LNY/imges/icon_folder_open.png" alt="">
+        <div class="iconcolor">
+
+<svg>
+
+<path class="st0" d="M4,20c-0.5,0-1-0.2-1.4-0.6S2,18.5,2,18V6c0-0.5,0.2-1,0.6-1.4C3,4.2,3.5,4,4,4h6l2,2h8c0.6,0,1,0.2,1.4,0.6
+	C21.8,7,22,7.4,22,8H11.2l-2-2H4v12l2.4-8h17.1l-2.6,8.6c-0.1,0.4-0.4,0.8-0.7,1C19.8,19.9,19.4,20,19,20H4z M6.1,18H19l1.8-6H7.9
+	L6.1,18z M6.1,18l1.8-6L6.1,18z M4,8V6V8z"/>
+</svg>
+
+
 </div>
       <!-- 타이틀 -->
       <h1>PORTFOLIO</h1>
