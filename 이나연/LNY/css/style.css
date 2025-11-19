@@ -99,3 +99,38 @@ svg {
   border-bottom: 1px solid #dcdcdc;
   color: #000;
 }
+
+/*인덱스 css*/
+.index-area {
+  width: 420px; /* 이미지 비율에 맞게 */
+  margin: 20px auto;
+}
+
+/* ul 기본 설정 */
+.index-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.index-list li {
+  padding: 8px 18px;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover → 노란색 */
+.index-list li:hover {
+  background: #f7c86a;
+  color: #000;
+}
