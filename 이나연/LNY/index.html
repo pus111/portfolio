@@ -4,104 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2025 Portfolio</title>
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: #f7f3f3; /* 랜딩 페이지 배경 */
-        font-family: "Pretendard", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .wrap {
-        text-align: center;
-      }
-
-      /* 폴더 아이콘 버튼 */
-      .folder-icon {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-      }
-
-      /* SVG 기본 라인색 */
-      .folder-icon svg {
-        width: 150px;
-        stroke: #cbbdb9; /* 기본 라인 */
-        fill: none;
-        stroke-width: 8;
-        transition: stroke 0.3s ease, transform 0.3s ease;
-      }
-
-      /* Hover 라인 변경 */
-      .folder-icon:hover svg {
-        stroke: #d2b48c; /* Tan 베이지 */
-        transform: translateY(-4px);
-      }
-
-      /* Active(클릭) 라인 변경 */
-      .folder-icon:active svg {
-        stroke: #ffcb62; /* 클릭 포인트 골드 */
-        transform: translateY(0);
-      }
-
-      h1 {
-        font-size: 32px;
-        margin-top: 18px;
-        margin-bottom: 30px;
-        color: #222;
-      }
-
-      /* 태그 버튼 */
-      .tag-box {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .tag {
-        padding: 10px 22px;
-        background: #f4ede8;
-        border-radius: 40px;
-        border: 1px solid #cbbdb9;
-        font-size: 15px;
-        cursor: default;
-      }
-
-      /* 강조 버튼 */
-      .tag.highlight {
-        background: #ffcb62;
-        color: #222;
-        border: none;
-        font-weight: 600;
-      }
-
-      footer {
-        position: fixed;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-        font-size: 14px;
-        color: #666;
-      }
-    </style>
   </head>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  background: #F7F3F3;
+  font-family: "Pretendard", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.wrap {
+  text-align: center;
+}
+
+/* 폴더 아이콘 이미지 */
+.folder-icon img {
+  width: 150px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(6%) saturate(300%) hue-rotate(314deg) brightness(96%) contrast(94%);
+  /* 기본 색상: #CBBDB9 톤과 비슷한 베이지톤 필터 */
+}
+
+/* Hover: 약간 더 진한 베이지 */
+.folder-icon:hover img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(34%) saturate(320%) hue-rotate(4deg) brightness(95%) contrast(92%);
+  transform: translateY(-4px);
+}
+
+/* Active: 클릭 시 포인트 골드(#FFCB62 계열) 느낌 */
+.folder-icon:active img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(62%) saturate(600%) hue-rotate(341deg) brightness(103%) contrast(99%);
+  transform: translateY(0);
+}
+
+/* 타이틀 */
+h1 {
+  font-size: 32px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* 태그 박스 */
+.tag-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  padding: 10px 22px;
+  background: #F4EDE8;
+  border-radius: 40px;
+  border: 1px solid #CBBDB9;
+  font-size: 15px;
+  cursor: default;
+}
+.iconcolor img{
+  width: 100px;
+  height: 100px;
+}
+/* 강조 태그 */
+.tag.highlight {
+  background: #FFCB62;
+  color: #222;
+  border: none;
+  font-weight: 600;
+}
+
+/* 푸터 */
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+</style>
   <body>
     <div class="wrap">
       <!-- 폴더 아이콘 -->
       <div class="folder-icon">
 <div class="iconcolor">
-<img src="../LNY/imges/" alt="">
+<img src="../LNY/imges/icon_folder_open.png" alt="">
 </div>
-  
-
       <!-- 타이틀 -->
       <h1>PORTFOLIO</h1>
 
