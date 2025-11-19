@@ -1,0 +1,90 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.wrap {
+  text-align: center;
+  background: #f7f3f3;
+  font-family: "Pretendard", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*추후 수정 */
+
+svg {
+  /*width: 100%; */
+  width: 270px;
+  height: 200px;
+}
+.st0 {
+  fill: #cbbdb9;
+  animation: svgcolor 1s infinite alternate;
+}
+@keyframes svgcolor {
+  0% {
+    fill: #cbbdb9;
+  }
+  50% {
+    fill: #d2b48c;
+  }
+  100% {
+    fill: #ffcb62;
+  }
+}
+
+/* 타이틀 */
+h1 {
+  font-size: 32px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* 태그 박스 */
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list li {
+  padding: 8px 18px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tag-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.tag-list li.active {
+  background-color: #f7c86a;
+  border-color: #f7c86a;
+  color: #000;
+  font-weight: 600;
+}
+
+/* 푸터 */
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
