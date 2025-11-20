@@ -5,11 +5,6 @@
     format("woff2");
 }
 
-/* @font-face {
-  font-family: "KboDiamondGothic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_light.woff")
-    format("woff");
-} */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +12,21 @@
 ul {
   list-style: none;
 }
+a {
+  list-style: none;
+}
+
+.wrap {
+  text-align: center;
+  background: #f7f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px 0 20px 0;
+}
+
+/*header top*/
 .tk-header {
   position: absolute;
   top: 20px;
@@ -30,26 +40,16 @@ ul {
   background: #fff;
 }
 
-.wrap {
-  text-align: center;
-  background: #f7f3f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 40px 0 20px 0;
-}
-
 /*추후 수정 */
 svg {
   /*width: 100%; */
-  width: 270px;
+  width: 280px;
   height: 200px;
   padding-bottom: 20px;
 }
 .st0 {
   fill: #cbbdb9;
-  animation: svgcolor 1s infinite alternate;
+  animation: svgcolor 4s infinite alternate;
 }
 @keyframes svgcolor {
   0% {
@@ -63,20 +63,20 @@ svg {
   }
 }
 
+.title p {
+  font-size: 60px;
+  font-weight: 500;
+  color: rgb(255, 199, 130);
+  display: block;
+  margin-bottom: 6px;
+  font-family: MungyeongGamhongApple;
+}
 /*WED 타이틀*/
-
 .title h1 {
   font-size: 80px;
   color: rgb(255, 199, 130);
   font-family: MungyeongGamhongApple;
-  /* font-family: KboDiamondGothic;
-  font-weight: 700; */
 }
-/* .title h1 {
-  font-size: 100px;
-  color: rgb(255, 199, 130);
-  font-family: SandollSamlipHobbangOutline;
-} */
 
 /*DESIGNER 아웃라인*/
 .title span {
@@ -164,3 +164,4 @@ svg {
   background: #f7c86a;
   color: #000;
 }
+/***********************************************************/
