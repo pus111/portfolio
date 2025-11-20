@@ -456,11 +456,34 @@ a {
   left: 0;
   top: 10%;
 }
+.conimg {
+  position: relative;
+}
 
 .conimg > p img {
   width: 500px;
   height: auto;
   display: block;
+}
+
+/*동그라미 버튼*/
+.mapwrap .map-marker {
+  position: absolute;
+  top: 50%; /* 이미지 위에서 원하는 위치 */
+  left: 30%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #6a00ff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.mapwrap .map-marker:hover {
+  transform: scale(1.2);
 }
 
 /*secondwap 소식통 백그라운드  */
