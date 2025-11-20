@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      svg {
+        width: 100%;
+        height: 500px;
+      }
+      .st0 {
+        fill: #f26d6d;
+        animation: svgcolor 1s infinite alternate;
+      }
+      @keyframes svgcolor {
+        0% {
+          fill: #f26d6d;
+        }
+        50% {
+          fill: #f0f;
+        }
+        100% {
+          fill: #00f;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="svgcolor">
+      <svg>
+        <path
+          class="st0"
+          d="M66.1,441.4l43,74.3c4.3,8.5,10.8,15.7,18.9,20.7s17.4,7.6,27,7.6h285.4l-59.2-102.6H66.1z M565.9,414
+	L399.7,123.3c-4.4-8.2-10.9-15.1-18.9-20c-8-4.9-17.1-7.3-26.4-7.3H266l257.3,447.6l40.7-70.5C565.9,469.9,585,443.4,565.9,414
+	L565.9,414z M339.2,368.5l-115.5-200l-115.5,200H339.2z"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
