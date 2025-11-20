@@ -45,6 +45,13 @@ svg {
   fill: #f7c86a;
 }
 
+/*Index 타이틀*/
+.title h1 {
+  font-size: 80px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
 /* intro 태그 */
 .intro-area {
   width: 420px; /* 이미지 비율에 맞게 */
