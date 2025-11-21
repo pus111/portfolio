@@ -1,0 +1,111 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+.about-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 40px 50px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto;
+  gap: 30px 40px;
+}
+
+/*카드전체*/
+.profile-card {
+  width: 300px;
+  height: 500px;
+  background: #ffc95b;
+  border-radius: 0 0 50px 50px;
+  padding: 35px 25px 45px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*이미지 가운데 배치 */
+.profile-img {
+  display: flex;
+  justify-content: center;
+}
+
+/*이미지 크기 */
+.profile-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+/*이름 정렬*/
+.name {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.name span {
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 5px;
+}
+
+/*아이콘 정렬*/
+.info-list img {
+  width: 30px; /* 원하는 크기 */
+  height: auto;
+}
+
+.info-list {
+  margin: 20px 0 32px;
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  margin-right: 20px;
+}
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* ---------------------------------------
+   RIGHT : ABOUT ME
+--------------------------------------- */
+
+/*about-title,about-sub 부모요소*/
+.about-box {
+  grid-column: 2;
+  margin-left: 50px;
+}
+
+.about-title {
+  font-size: 40px;
+  color: #ffcb62;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.about-sub span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffc95b;
+  margin-bottom: 10px;
+}
+
+.about-sub p {
+  font-size: 18px;
+  color: black;
+  line-height: 1.6;
+  margin-top: 4px;
+}
