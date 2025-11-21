@@ -134,20 +134,24 @@ ul {
   display: flex;
 }
 
+.about-sub {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .about-sub span {
   font-size: 20px;
-  font-weight: 600;
-  color: #ffc95b;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #f6a100;
+  white-space: nowrap;
 }
 
 .about-sub p {
-  font-size: 18px;
-  color: black;
-  line-height: 1.6;
-  margin-top: 4px;
+  font-size: 15px;
+  color: #777;
+  line-height: 1.4;
 }
-
 /* ---------------------------------------
    아래 2컬럼 (학력, 교육, 자격사항)
 --------------------------------------- */
@@ -155,4 +159,23 @@ ul {
   grid-column: 2;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.contents h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffcb62;
+  margin-bottom: 10px;
+}
+
+.contents p {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 6px;
+}
+.co2 {
+  width: 100px;
+  margin-top: 15px;
 }
