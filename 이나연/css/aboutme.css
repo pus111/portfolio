@@ -77,7 +77,45 @@ ul {
   gap: 10px;
   margin-bottom: 15px;
 }
+.profile-card .back ul li {
+  align-items: center;
+}
 
+/*뒤로가기 */
+.back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.back li {
+  display: flex;
+  justify-content: center;
+}
+
+.back a {
+  display: inline-block;
+  padding: 10px 28px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px; /* 둥근 버튼 */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* hover 효과 */
+.back a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
 /* ---------------------------------------
    RIGHT : ABOUT ME
 --------------------------------------- */
@@ -108,4 +146,13 @@ ul {
   color: black;
   line-height: 1.6;
   margin-top: 4px;
+}
+
+/* ---------------------------------------
+   아래 2컬럼 (학력, 교육, 자격사항)
+--------------------------------------- */
+.contents {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
 }
