@@ -15,7 +15,9 @@ ul {
 a {
   list-style: none;
 }
-
+#thewrap {
+  background: #f7f3f3;
+}
 /*----------------------------------------------------
               top 부분
 ----------------------------------------------------*/
@@ -77,13 +79,14 @@ svg {
 
 /*WED 타이틀*/
 .title h1 {
-  font-size: 80px;
+  font-size: 60px;
   color: rgb(255, 199, 130);
   font-family: MungyeongGamhongApple;
 }
 
 /*DESIGNER 아웃라인*/
 .title span {
+  font-size: 80px;
   -webkit-text-stroke: 1px rgb(255, 199, 130);
   color: transparent;
 }
@@ -121,18 +124,6 @@ svg {
 /* hover → 노란색 */
 .index-list li:hover {
   background: #f7c86a;
-  color: #000;
-}
-
-/* 푸터 */
-.bottom-footer {
-  width: 100%;
-  text-align: center;
-  padding: 14px 0;
-  font-size: 14px;
-  /* background: #fff; */
-  border-top: 1px solid #dcdcdc;
-  border-bottom: 1px solid #dcdcdc;
   color: #000;
 }
 
@@ -178,7 +169,7 @@ svg {
 .about-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  background: #fff;
+  background: #f7f3f3;
   border-radius: 12px;
   padding: 40px 40px 50px;
   display: grid;
@@ -257,10 +248,11 @@ svg {
 .about-box {
   grid-column: 2;
   margin-left: 50px;
+  margin-top: 10px;
 }
 
 .about-title {
-  font-size: 40px;
+  font-size: 60px;
   color: #ffcb62;
   font-weight: 700;
   margin-bottom: 30px;
@@ -274,14 +266,14 @@ svg {
 }
 
 .about-sub span {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: #f6a100;
   white-space: nowrap;
 }
 
 .about-sub p {
-  font-size: 15px;
+  font-size: 25px;
   color: #777;
   line-height: 1.4;
 }
@@ -311,4 +303,16 @@ svg {
 .co2 {
   width: 100px;
   margin-top: 15px;
+}
+
+/* 푸터 */
+.bottom-footer {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 14px;
+  /* background: #fff; */
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  color: #000;
 }
