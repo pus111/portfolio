@@ -288,10 +288,111 @@ svg {
   flex: 1;
 }
 
-.img-box img {
-  width: 350px;
-  opacity: 0.9;
-  margin-left: 40px;
+/*------------------------------------
+skills 막대그래프 
+----------------------------------------/*
+
+/* 전체 영역 */
+.skills {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.skills h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffcb62;
+}
+
+/* 스킬 아이템 */
+.skill-item {
+  margin-bottom: 22px;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.skill-title img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.skill-title p {
+  font-size: 15px;
+  font-weight: 500;
+}
+/* 막대 공통 */
+.skill-bar {
+  width: 100%;
+  height: 12px;
+  background: #e9e9e9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 6px;
+  animation: fillBar 2s forwards;
+}
+
+/* ----- 각 스킬 색상 + 퍼센트 설정 ----- */
+
+/* Illustrator */
+.skill-item.ai .skill-fill {
+  --percent: 90%;
+  background: #ff9a00; /* 오렌지 톤 */
+}
+/* Photoshop */
+.skill-item.ps:nth-of-type(2) .skill-fill {
+  --percent: 85%;
+  background: #31a8ff; /* 포토샵 블루 */
+}
+
+/* Figma */
+.skill-item.fi .skill-fill {
+  --percent: 80%;
+  background: #a259ff; /* 피그마 퍼플 */
+}
+
+/* jQuery */
+.skill-item.jq .skill-fill {
+  --percent: 70%;
+  background: #0769ad; /* 제이쿼리 블루 */
+}
+
+/* CSS */
+.skill-item.css .skill-fill {
+  --percent: 75%;
+  background: #264de4; /* CSS 블루 */
+}
+
+/* HTML */
+.skill-item.HTML .skill-fill {
+  --percent: 78%;
+  background: #e44d26; /* HTML 오렌지 */
+}
+
+/* JavaScript */
+.skill-item.JS .skill-fill {
+  --percent: 65%;
+  background: #f7df1e; /* JS 옐로우 */
+}
+
+/* 애니메이션 */
+@keyframes fillBar {
+  to {
+    width: var(--percent);
+  }
 }
 
 /* 푸터 */
