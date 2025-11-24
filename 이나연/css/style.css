@@ -269,7 +269,7 @@ svg {
 }
 
 /* ----------------------------------
-   학력 / 경력 / 자격사항 + 이미지
+   학력 / 경력 / 자격사항 
 ---------------------------------- */
 .contents {
   display: flex;
@@ -290,18 +290,14 @@ svg {
   color: #444;
   margin-bottom: 6px;
 }
-
-.info-box {
-  flex: 1;
-}
 .skills {
   font-size: 20px;
   color: #ffcb62;
 }
 
-.Program_tools {
+/* .Program_tools {
   display: flex;
-}
+} */
 
 /*------------------------------------------------------------
 projects 전체 
@@ -378,14 +374,6 @@ projects 전체
 .projecte_txt p {
   font-size: 20px;
   font-weight: 300;
-}
-
-.but {
-  font-size: 20px;
-  padding-top: 20px;
-  border: 3px solid #ccc;
-  border-radius: 999px;
-  margin-top: 20px;
 }
 
 .but p {
