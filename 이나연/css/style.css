@@ -302,101 +302,6 @@ svg {
 .Program_tools {
   display: flex;
 }
-/*------------------------------------
-skills 막대그래프 
-----------------------------------------
-
-
-
-
-.skills h4 {
-  font-size: 28px;
-  margin-bottom: 25px;
-  font-weight: 700;
-}
-
-
-.web_skills,
-.design_skill {
-  width: 50%;
-}
-
-.skills {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.skill-item {
-  margin-bottom: 20px;
-}
-
-.skill-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.skill-title img {
-  width: 26px;
-  height: 26px;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 14px;
-  background: #eee;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
-  width: 0;
-  border-radius: 10px;
-  position: relative;
-  animation: fillBar 2s forwards;
-}
-
-
-.skill-item.ai .skill-fill {
-  --percent: 95%;
-  background: #ff5722;
-}
-.skill-item.ps .skill-fill {
-  --percent: 90%;
-  background: #03a9f4;
-}
-.skill-item.fi .skill-fill {
-  --percent: 85%;
-  background: #66bb6a;
-}
-
-.skill-item.jq .skill-fill {
-  --percent: 70%;
-  background: #1266a9;
-}
-.skill-item.css .skill-fill {
-  --percent: 70%;
-  background: #35c1f1;
-}
-.skill-item.HTML .skill-fill {
-  --percent: 80%;
-  background: #f5d227;
-}
-.skill-item.JS .skill-fill {
-  --percent: 70%;
-  background: #ffcb62;
-}
-
-@keyframes fillBar {
-  to {
-    width: var(--percent);
-  }
-}/*
 
 /*------------------------------------------------------------
 projects 전체 
@@ -406,7 +311,7 @@ projects 전체
   max-width: 2000px;
   margin: 50px auto;
   padding: 0 20px;
-  background: #f5d227;
+  background: #ffcb62;
   padding: 30px;
 }
 
@@ -474,7 +379,32 @@ projects 전체
   font-size: 20px;
   font-weight: 300;
 }
+/*.but {
+   padding: 8px 18px;
+  font-size: 14px;
+   background: #fff;
+  border: 3px solid #ccc;
+  border-radius: 999px;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s;  
+}*/
 
+.but {
+  font-size: 20px;
+  padding-top: 20px;
+  border: 3px solid #ccc;
+  border-radius: 999px;
+  margin-top: 20px;
+}
+
+.but p {
+  text-align: left;
+  margin-left: 30px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
 /*각각의 이미지 크기 조절*/
 .project_img {
   display: flex;
@@ -496,6 +426,15 @@ projects 전체
   height: 400px;
 }
 
+.end {
+  width: 2000px;
+  height: 300px;
+  background: #ffc84e;
+  font-size: 90px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 50px;
+}
 /* 푸터 */
 .bottom-footer {
   width: 100%;
