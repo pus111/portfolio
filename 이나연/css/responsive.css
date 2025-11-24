@@ -1,0 +1,71 @@
+@charset "utf-8";
+@media screen and (max-width: 1750px) {
+  .aboutRightWrap {
+    flex-direction: column;
+    flex: 1 1;
+    align-items: flex-start;
+  }
+  .info-box {
+    display: flex;
+    gap: 40px;
+  }
+  .skills_txt {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .aboutRightWrap > div {
+    width: 100%;
+  }
+  .about {
+    align-items: center;
+    gap: 40px;
+  }
+  .info-box {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .about {
+    flex-direction: column;
+  }
+  .projects .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project_img {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutRightWrap {
+    justify-content: flex-start;
+  }
+  .about {
+    display: block;
+    padding: 10px;
+  }
+  .about-sub span {
+    font-size: 5vw;
+  }
+  .about-sub p {
+    font-size: 4vw;
+  }
+  .Program_tools img {
+    width: 13%;
+    object-fit: cover;
+  }
+  .ipad_expe img {
+    width: 300px;
+  }
+  .mac_expe img {
+    width: 300px;
+  }
+  .imac_expe img {
+    width: 300px;
+  }
+  .profile-card {
+    margin: 0 auto 20px;
+  }
+}

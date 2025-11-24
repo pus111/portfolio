@@ -74,14 +74,12 @@ svg {
   color: rgb(255, 199, 130);
   display: block;
   margin-bottom: 6px;
-  font-family: MungyeongGamhongApple;
 }
 
 /*WED 타이틀*/
 .title h1 {
   font-size: 60px;
   color: rgb(255, 199, 130);
-  font-family: MungyeongGamhongApple;
 }
 
 /*DESIGNER 아웃라인*/
@@ -173,6 +171,7 @@ svg {
   background: #fcf7f2;
   width: 100%;
   box-sizing: border-box;
+  align-items: flex-end;
 }
 
 /* ----------------------------------
@@ -237,7 +236,13 @@ svg {
 /* ----------------------------------
    오른쪽 ABOUT ME 영역
 ---------------------------------- */
-
+.aboutRightWrap {
+  display: flex;
+  align-items: flex-end;
+}
+.profile-card {
+  flex-shrink: 0;
+}
 .about-title {
   font-size: 60px;
   font-weight: 700;
@@ -270,11 +275,11 @@ svg {
 ---------------------------------- */
 .contents {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 100%;
+  /* justify-content: space-between;
+  align-items: flex-start; */
   margin-top: 60px;
 }
-
 .contents h4 {
   font-size: 20px;
   font-weight: 700;
@@ -287,15 +292,15 @@ svg {
   color: #444;
   margin-bottom: 6px;
 }
-.skills {
+.skills_txt {
   font-size: 20px;
   color: #ffcb62;
 }
-
-/* .Program_tools {
+.Program_tools {
+  /* width: 100px; */
+  height: auto;
   display: flex;
-} */
-
+}
 /*------------------------------------------------------------
 projects 전체 
 ----------------------------------------------------------------*/
@@ -307,13 +312,21 @@ projects 전체
   background: #ffcb62;
   padding: 30px;
 }
-
+.projects .inner {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.projects-card {
+  display: flex;
+}
 /* 프로젝트 섹션 헤딩 */
 .projects h1 {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 30px;
   color: #c86908;
+  text-align: center;
 }
 
 .projects-info h4 {
@@ -327,16 +340,6 @@ projects 전체
   font-size: 35px;
 }
 
-/*프로젝트 글자*/
-.projecte_txt h5 {
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.projecte_txt p {
-  font-size: 20px;
-  font-weight: 300;
-}
 /* 핵심색상 + 프로그램 컬럼 */
 .projects_column {
   display: flex;
@@ -357,9 +360,18 @@ projects 전체
 .project-color img,
 .project-tools img {
   width: 100%;
-  max-width: 100px;
+  max-width: 90px;
   height: auto;
-  border-radius: 8px;
+}
+/*프로젝트 글자*/
+.projecte_txt h5 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.projecte_txt p {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 /*프로젝트 글자*/
@@ -371,6 +383,7 @@ projects 전체
 .projecte_txt p {
   font-size: 20px;
   font-weight: 300;
+  word-break: keep-all;
 }
 
 .but p {
@@ -379,9 +392,11 @@ projects 전체
   font-weight: 500;
   padding-bottom: 20px;
 }
+
 /*각각의 이미지 크기 조절*/
 .project_img {
   display: flex;
+  justify-content: center;
 }
 .project_img p {
   display: inline-block;
@@ -389,25 +404,31 @@ projects 전체
 }
 .ipad_expe img {
   width: 500px;
-  height: 400px;
+  /* height: 400px; */
+  object-fit: cover;
 }
 .mac_expe img {
   width: 600px;
-  height: 400px;
+  /* height: 400px; */
+  object-fit: cover;
 }
 .imac_expe img {
   width: 600px;
-  height: 400px;
+  /* height: 400px; */
+  object-fit: cover;
 }
 
 .end {
-  width: 2000px;
+  width: 100%;
   height: 300px;
   background: #ffc84e;
   font-size: 90px;
   font-weight: 800;
   text-align: center;
   margin-top: 50px;
+}
+.end p {
+  line-height: 300px;
 }
 /* 푸터 */
 .bottom-footer {
