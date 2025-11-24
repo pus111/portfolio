@@ -294,17 +294,20 @@ svg {
 .info-box {
   flex: 1;
 }
+.skills {
+  font-size: 20px;
+  color: #ffcb62;
+}
 
+.Program_tools {
+  display: flex;
+}
 /*------------------------------------
 skills 막대그래프 
-----------------------------------------/*
+----------------------------------------
 
-/* 전체 섹션 */
-.skills {
-  width: 100%;
-  max-width: 1100px;
-  margin: 40px auto;
-}
+
+
 
 .skills h4 {
   font-size: 28px;
@@ -312,7 +315,7 @@ skills 막대그래프
   font-weight: 700;
 }
 
-/* --- 두 그룹을 좌우 배치 --- */
+
 .web_skills,
 .design_skill {
   width: 50%;
@@ -324,7 +327,6 @@ skills 막대그래프
   flex-wrap: wrap;
 }
 
-/* --- 개별 스킬 아이템 --- */
 .skill-item {
   margin-bottom: 20px;
 }
@@ -342,7 +344,6 @@ skills 막대그래프
   height: 26px;
 }
 
-/* --- 막대 바 --- */
 .skill-bar {
   width: 100%;
   height: 14px;
@@ -360,7 +361,7 @@ skills 막대그래프
   animation: fillBar 2s forwards;
 }
 
-/* 각각 그래프 색상 및 퍼센트 */
+
 .skill-item.ai .skill-fill {
   --percent: 95%;
   background: #ff5722;
@@ -395,9 +396,10 @@ skills 막대그래프
   to {
     width: var(--percent);
   }
-}
+}/*
+
 /*------------------------------------------------------------
-projects 
+projects 전체 
 ----------------------------------------------------------------*/
 
 .projects_box {
@@ -405,6 +407,7 @@ projects
   margin: 50px auto;
   padding: 0 20px;
   background: #f5d227;
+  padding: 30px;
 }
 
 /* 프로젝트 섹션 헤딩 */
@@ -450,6 +453,7 @@ projects
   height: auto;
   border-radius: 8px;
 }
+/*각각의 이미지 크기 조절*/
 .project_img {
   display: flex;
 }
@@ -465,6 +469,18 @@ projects
   width: 600px;
   height: 400px;
 }
+
+/*프로젝트 글자*/
+.projecte_txt h5 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.projecte_txt p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 /* 푸터 */
 .bottom-footer {
   width: 100%;
