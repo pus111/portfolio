@@ -183,12 +183,13 @@ svg {
   background: #ffc84e;
   padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  padding-top: 50px;
 }
 
 .profile-img img {
-  width: 160px;
-  height: 160px;
+  width: 200x;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto;
@@ -196,20 +197,25 @@ svg {
 }
 
 .name {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   font-weight: 700;
   margin-top: 25px;
-}
-
-.name span {
-  font-size: 18px;
-  display: block;
-  margin-top: 5px;
   color: #fff;
 }
 
+.name span {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  margin-left: 10px;
+}
+
 .info-list {
-  margin-top: 30px;
+  margin-top: 20px;
   list-style: none;
   padding: 0;
 }
@@ -220,11 +226,12 @@ svg {
   gap: 10px;
   margin: 12px 0;
   font-size: 15px;
+  font-weight: 500;
   color: #fff;
 }
 
 .info-list li img {
-  width: 18px;
+  width: 25px;
 }
 
 /* ----------------------------------
@@ -292,23 +299,34 @@ svg {
 skills 막대그래프 
 ----------------------------------------/*
 
-/* 전체 영역 */
+/* 전체 섹션 */
 .skills {
   width: 100%;
-  max-width: 600px;
+  max-width: 1100px;
   margin: 40px auto;
 }
 
 .skills h4 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 25px;
   font-weight: 700;
-  color: #ffcb62;
 }
 
-/* 스킬 아이템 */
+/* --- 두 그룹을 좌우 배치 --- */
+.web_skills,
+.design_skill {
+  width: 50%;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* --- 개별 스킬 아이템 --- */
 .skill-item {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .skill-title {
@@ -317,78 +335,62 @@ skills 막대그래프
   gap: 10px;
   font-weight: 600;
   margin-bottom: 6px;
-  font-size: 16px;
 }
 
 .skill-title img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 26px;
+  height: 26px;
 }
-.skill-title p {
-  font-size: 15px;
-  font-weight: 500;
-}
-/* 막대 공통 */
+
+/* --- 막대 바 --- */
 .skill-bar {
   width: 100%;
-  height: 12px;
-  background: #e9e9e9;
-  border-radius: 6px;
+  height: 14px;
+  background: #eee;
+  border-radius: 10px;
+  position: relative;
   overflow: hidden;
 }
 
 .skill-fill {
   height: 100%;
   width: 0;
-  border-radius: 6px;
+  border-radius: 10px;
+  position: relative;
   animation: fillBar 2s forwards;
 }
 
-/* ----- 각 스킬 색상 + 퍼센트 설정 ----- */
-
-/* Illustrator */
+/* 각각의 스킬 퍼센트 → 원하는 값으로 변경 가능 */
 .skill-item.ai .skill-fill {
+  --percent: 95%;
+  background: #ff5722;
+}
+.skill-item.ps .skill-fill {
   --percent: 90%;
-  background: #ff9a00; /* 오렌지 톤 */
+  background: #03a9f4;
 }
-/* Photoshop */
-.skill-item.ps:nth-of-type(2) .skill-fill {
-  --percent: 85%;
-  background: #31a8ff; /* 포토샵 블루 */
-}
-
-/* Figma */
 .skill-item.fi .skill-fill {
-  --percent: 80%;
-  background: #a259ff; /* 피그마 퍼플 */
+  --percent: 85%;
+  background: #66bb6a;
 }
 
-/* jQuery */
 .skill-item.jq .skill-fill {
   --percent: 70%;
-  background: #0769ad; /* 제이쿼리 블루 */
+  background: #1266a9;
 }
-
-/* CSS */
 .skill-item.css .skill-fill {
-  --percent: 75%;
-  background: #264de4; /* CSS 블루 */
+  --percent: 70%;
+  background: #35c1f1;
 }
-
-/* HTML */
 .skill-item.HTML .skill-fill {
-  --percent: 78%;
-  background: #e44d26; /* HTML 오렌지 */
+  --percent: 80%;
+  background: #f5d227;
 }
-
-/* JavaScript */
 .skill-item.JS .skill-fill {
-  --percent: 65%;
-  background: #f7df1e; /* JS 옐로우 */
+  --percent: 70%;
+  background: #ffcb62;
 }
 
-/* 애니메이션 */
 @keyframes fillBar {
   to {
     width: var(--percent);
