@@ -402,7 +402,7 @@ skills 막대그래프
 projects 전체 
 ----------------------------------------------------------------*/
 
-.projects_box {
+.projects {
   max-width: 2000px;
   margin: 50px auto;
   padding: 0 20px;
@@ -429,6 +429,16 @@ projects 전체
   font-size: 35px;
 }
 
+/*프로젝트 글자*/
+.projecte_txt h5 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.projecte_txt p {
+  font-size: 20px;
+  font-weight: 300;
+}
 /* 핵심색상 + 프로그램 컬럼 */
 .projects_column {
   display: flex;
@@ -449,13 +459,29 @@ projects 전체
 .project-color img,
 .project-tools img {
   width: 100%;
-  max-width: 150px;
+  max-width: 100px;
   height: auto;
   border-radius: 8px;
 }
+
+/*프로젝트 글자*/
+.projecte_txt h5 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.projecte_txt p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 /*각각의 이미지 크기 조절*/
 .project_img {
   display: flex;
+}
+.project_img p {
+  display: inline-block;
+  margin: 10px;
 }
 .ipad_expe img {
   width: 500px;
@@ -468,17 +494,6 @@ projects 전체
 .imac_expe img {
   width: 600px;
   height: 400px;
-}
-
-/*프로젝트 글자*/
-.projecte_txt h5 {
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.projecte_txt p {
-  font-size: 20px;
-  font-weight: 300;
 }
 
 /* 푸터 */
