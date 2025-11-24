@@ -269,7 +269,7 @@ svg {
 }
 
 /* ----------------------------------
-   학력 / 경력 / 자격사항 
+   학력 / 경력 / 자격사항 + 이미지
 ---------------------------------- */
 .contents {
   display: flex;
@@ -295,70 +295,175 @@ svg {
   flex: 1;
 }
 
+/*------------------------------------
+skills 막대그래프 
+----------------------------------------/*
+
+/* 전체 섹션 */
+.skills {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.skills h4 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* --- 두 그룹을 좌우 배치 --- */
+.web_skills,
+.design_skill {
+  width: 50%;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* --- 개별 스킬 아이템 --- */
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.skill-title img {
+  width: 26px;
+  height: 26px;
+}
+
+/* --- 막대 바 --- */
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: #eee;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  position: relative;
+  animation: fillBar 2s forwards;
+}
+
+/* 각각 그래프 색상 및 퍼센트 */
+.skill-item.ai .skill-fill {
+  --percent: 95%;
+  background: #ff5722;
+}
+.skill-item.ps .skill-fill {
+  --percent: 90%;
+  background: #03a9f4;
+}
+.skill-item.fi .skill-fill {
+  --percent: 85%;
+  background: #66bb6a;
+}
+
+.skill-item.jq .skill-fill {
+  --percent: 70%;
+  background: #1266a9;
+}
+.skill-item.css .skill-fill {
+  --percent: 70%;
+  background: #35c1f1;
+}
+.skill-item.HTML .skill-fill {
+  --percent: 80%;
+  background: #f5d227;
+}
+.skill-item.JS .skill-fill {
+  --percent: 70%;
+  background: #ffcb62;
+}
+
+@keyframes fillBar {
+  to {
+    width: var(--percent);
+  }
+}
 /*------------------------------------------------------------
 projects 
 ----------------------------------------------------------------*/
 
-/*프로젝트 전체 노란색 박스 */
 .projects_box {
   max-width: 2000px;
   margin: 50px auto;
-  font-family: "Arial", sans-serif;
   padding: 0 20px;
-  background: #ffcb62;
+  background: #f5d227;
 }
 
-/*프로젝트 영문 */
+/* 프로젝트 섹션 헤딩 */
 .projects h1 {
-  color: #c86908;
-  padding-top: 50px;
   font-size: 50px;
-  font-weight: 800;
-  margin-left: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #c86908;
 }
 
-/*# 전체 */
+.projects-info h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.projects-info h4 span {
+  font-weight: 700;
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+/* 핵심색상 + 프로그램 컬럼 */
 .projects_column {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5px;
+  gap: 30px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
-  margin-left: 50px;
 }
 
-/*핵심색상,프로그램*/
-.project-color,
-.project-tools {
-  min-width: 200px;
-  text-align: left;
-}
-
-/*핵심색상,프로그램 p태그*/
 .project-color p,
 .project-tools p {
+  font-size: 20px;
+  margin-top: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-/*핵심색상,프로그램 img */
 .project-color img,
 .project-tools img {
-  width: 50%;
+  width: 100%;
+  max-width: 150px;
   height: auto;
+  border-radius: 8px;
 }
-
-.projects-card {
-  margin-bottom: 20px;
-  margin-left: 50px;
+.project_img {
+  display: flex;
 }
-
-.projects-txt h4 {
-  font-size: 30px;
+.ipad_expe img {
+  width: 500px;
+  height: 400px;
 }
-.projects-txt span {
-  font-size: 25px;
-  font-weight: 500;
+.mac_expe img {
+  width: 600px;
+  height: 400px;
+}
+.imac_expe img {
+  width: 600px;
+  height: 400px;
 }
 /* 푸터 */
 .bottom-footer {
