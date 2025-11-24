@@ -360,7 +360,7 @@ skills 막대그래프
   animation: fillBar 2s forwards;
 }
 
-/* 각각의 스킬 퍼센트 → 원하는 값으로 변경 가능 */
+/* 각각 그래프 색상 및 퍼센트 */
 .skill-item.ai .skill-fill {
   --percent: 95%;
   background: #ff5722;
@@ -396,7 +396,71 @@ skills 막대그래프
     width: var(--percent);
   }
 }
+/*------------------------------------------------------------
+projects 
+----------------------------------------------------------------*/
 
+/*프로젝트 전체 노란색 박스 */
+.projects_box {
+  max-width: 2000px;
+  margin: 50px auto;
+  font-family: "Arial", sans-serif;
+  padding: 0 20px;
+  background: #ffcb62;
+}
+
+/*프로젝트 영문 */
+.projects h1 {
+  color: #c86908;
+  padding-top: 50px;
+  font-size: 50px;
+  font-weight: 800;
+  margin-left: 50px;
+}
+
+/*# 전체 */
+.projects_column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+/*핵심색상,프로그램*/
+.project-color,
+.project-tools {
+  min-width: 200px;
+  text-align: left;
+}
+
+/*핵심색상,프로그램 p태그*/
+.project-color p,
+.project-tools p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/*핵심색상,프로그램 img */
+.project-color img,
+.project-tools img {
+  width: 50%;
+  height: auto;
+}
+
+.projects-card {
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.projects-txt h4 {
+  font-size: 30px;
+}
+.projects-txt span {
+  font-size: 25px;
+  font-weight: 500;
+}
 /* 푸터 */
 .bottom-footer {
   width: 100%;
