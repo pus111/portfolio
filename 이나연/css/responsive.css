@@ -68,4 +68,30 @@
   .profile-card {
     margin: 0 auto 20px;
   }
+  .title p {
+    font-size: 9.5vw;
+  }
+  .title h1 {
+    font-size: 9.5vw;
+  }
+  .title span {
+    font-size: 9.5vw;
+  }
+  projects-info h4 {
+    font-size: 4.5vw;
+  }
+  projects-info span {
+    font-size: 5vw;
+  }
+
+  .projecte_txt h5 {
+    font-size: 5vw;
+    font-weight: 600;
+  }
+  .projecte_txt p {
+    font-size: 4.5vw;
+  }
+  .end p {
+    font-size: 9vw;
+  }
 }
