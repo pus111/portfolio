@@ -1,0 +1,358 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input {
+  display: none;
+}
+/* section {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+} 
+section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 0;
+  top: 0;
+}*/
+
+#fullmenu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+  z-index: 1;
+}
+#fullmenu ul {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+#fullmenu ul li {
+  margin: 25px 0;
+}
+#fullmenu ul li a {
+  font-size: 27px;
+}
+section {
+  height: 100vh;
+}
+
+/* section.visual {
+  position: relative;
+  background-image: url("../imges/bg_about.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+} */
+.visual {
+  position: relative;
+  height: 100vh;
+  background: url("../imges/bg_about.jpg");
+}
+.visual nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1720px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  z-index: 10;
+}
+.visual nav .logo {
+  width: 150px;
+}
+/*============================================*/
+.visual nav .right {
+  display: flex;
+  gap: 40px;
+  align-items: right;
+}
+
+.visual nav .right .mall {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+
+.visual nav .right .mall img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.visual nav .right .lang a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+.visual nav .right .hambuger label {
+  cursor: pointer;
+}
+
+.visual nav .right .hambuger label span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  margin: 9px 0;
+  transition: 0.5s;
+}
+
+/*-------------------------------------------*/
+
+/* Main Visual 내부 */
+.main_visual {
+  position: relative;
+  height: 100vh; /* visual과 동일 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  z-index: 1;
+  margin: 60px;
+}
+
+.main_visual .logo_box img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.main_visual .txt_box p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main_visual .txt_box p span {
+  color: #0072c6;
+  font-weight: bold;
+}
+
+.main_visual .txt_box h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0072c6;
+}
+/*-----------------------------------------*/
+section.visual nav .logo img {
+  width: 100%;
+  filter: none !important; /* filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
+    brightness(107%) contrast(100%); 흰색 로고 ---->   filter: none !important; 파란색로고로 변환 */
+}
+
+.title_area .logo_box img {
+  width: 430px;
+  margin-left: auto;
+}
+.con img {
+  width: 100%;
+  max-width: 1280px;
+  height: 470px;
+  display: block;
+  margin: 0 auto;
+}
+
+.txt h4 {
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 50px;
+}
+.txt span {
+  line-height: 150%;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+section.visual nav .right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+section.visual nav .right .mall {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+section.visual nav .right .mall a {
+  color: #000;
+}
+section.visual nav .right .mall img {
+  width: 20px;
+  height: 20px;
+  filter: invert();
+  vertical-align: middle;
+}
+section.visual nav .right .lang a {
+  color: #fff;
+  display: block;
+  /* text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 10px; */
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+section.visual nav .right .hambuger label {
+  cursor: pointer;
+}
+section.visual nav .right .hambuger label span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  margin: 9px 0;
+  transition: 0.5s;
+}
+section.visual h1 {
+  color: #fff;
+  font-size: 90px;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
+  transform: translate(0, 11px) rotate(45deg);
+  background: #000;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar2 {
+  opacity: 0;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
+  background: #000;
+}
+#menu:checked ~ #fullmenu {
+  right: 0;
+}
+#menu:checked ~ section.visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 500px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+#mall_btn {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  cursor: pointer;
+}
+#mall_btn ul {
+  border-radius: 40px 40px;
+  background: #173d81;
+  height: 85px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+#mall_btn ul li {
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #fff;
+  padding-top: 25px;
+}
+#mall_btn ul li img {
+  width: 32px;
+  height: 32px;
+}
+#mall_btn ul li:nth-child(3) img,
+#mall_btn ul li:nth-child(4) img {
+  filter: invert();
+}
+#mall_btn:hover ul {
+  height: 240px;
+}
+#mall_btn:hover ul li:first-child {
+  display: none;
+}
+
+/*푸터 영역*/
+#max_footer {
+  padding: 50px 0;
+  background: #fff;
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+}
+
+.gnb_inner {
+  max-width: 1720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* 왼쪽 구성 */
+.footer_left img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer_info .fline li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+/* 오른쪽 구성 */
+.footer_right {
+  text-align: right;
+}
+
+.link_sns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.link_sns img {
+  width: 25px;
+  height: 25px;
+}
+
+.family_site button {
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.copy {
+  font-size: 13px;
+  color: #666;
+}
