@@ -48,25 +48,18 @@ section video {
 #fullmenu ul li a {
   font-size: 27px;
 }
+
 section {
   height: 100vh;
 }
-
-/* section.visual {
+section.visual {
   position: relative;
   background-image: url("../imges/bg_about.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 150px;
-} */
-.visual {
-  position: relative;
-  height: 100vh;
-  background: url("../imges/bg_about.jpg");
 }
-.visual nav {
+section.visual nav {
   position: absolute;
   top: 0;
   left: 50%;
@@ -78,97 +71,56 @@ section {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  z-index: 10;
+  z-index: 1;
 }
-.visual nav .logo {
+
+/*top 상단 로고 */
+section.visual nav .logo {
   width: 150px;
 }
-/*============================================*/
-.visual nav .right {
-  display: flex;
-  gap: 40px;
-  align-items: right;
-}
-
-.visual nav .right .mall {
-  height: 28px;
-  line-height: 28px;
-  padding: 0 20px;
-  border: 1px solid #fff;
-  border-radius: 30px;
-}
-
-.visual nav .right .mall img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
-
-.visual nav .right .lang a {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  padding: 10px;
-}
-
-.visual nav .right .hambuger label {
-  cursor: pointer;
-}
-
-.visual nav .right .hambuger label span {
-  display: block;
-  width: 35px;
-  height: 2px;
-  background: #fff;
-  margin: 9px 0;
-  transition: 0.5s;
-}
-
-/*-------------------------------------------*/
-
-/* Main Visual 내부 */
-.main_visual {
-  position: relative;
-  height: 100vh; /* visual과 동일 높이 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  text-align: left;
-  z-index: 1;
-  margin: 60px;
-}
-
-.main_visual .logo_box img {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.main_visual .txt_box p {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.main_visual .txt_box p span {
-  color: #0072c6;
-  font-weight: bold;
-}
-
-.main_visual .txt_box h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #0072c6;
-}
-/*-----------------------------------------*/
 section.visual nav .logo img {
   width: 100%;
-  filter: none !important; /* filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
-    brightness(107%) contrast(100%); 흰색 로고 ---->   filter: none !important; 파란색로고로 변환 */
+  filter: none !important;
 }
 
-.title_area .logo_box img {
-  width: 430px;
-  margin-left: auto;
+/*중간 로고 */
+.logo_area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
 }
+
+.logoimg img {
+  display: block; /* 이미지 아래 여백 제거 */
+  width: 430px; /* 로고 크기 조절 */
+  height: auto;
+  margin-left: 100px;
+}
+
+/* 텍스트 박스 */
+.visual .logo_area .txt_box p {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 300;
+  margin-left: 100px;
+  margin-top: 60px;
+}
+
+.visual .logo_area .txt_box p samp {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.visual .logo_area .txt_box h4 {
+  font-size: 72px;
+  margin: 0;
+  margin-left: 100px;
+  margin-bottom: 5px;
+}
+
 .con img {
   width: 100%;
   max-width: 1280px;
@@ -204,7 +156,7 @@ section.visual nav .right .mall {
   border-radius: 30px;
 }
 section.visual nav .right .mall a {
-  color: #000;
+  color: #fff;
 }
 section.visual nav .right .mall img {
   width: 20px;
@@ -298,8 +250,6 @@ section.visual h1 {
 #mall_btn:hover ul li:first-child {
   display: none;
 }
-
-/*푸터 영역*/
 #max_footer {
   padding: 50px 0;
   background: #fff;
