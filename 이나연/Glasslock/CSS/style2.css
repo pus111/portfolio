@@ -191,11 +191,19 @@ section.visual nav .logo img {
 .technology .inner {
   width: 1400px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
+  display: flex;
+  flex-direction: column; /* 제목은 위, 콘텐츠는 아래 */
+  z-index: 2;
 }
+.technology .tit {
+  margin-bottom: 70px;
+}
+.technology .tit span {
+  font-size: 40px;
+  font-weight: 700;
+}
+
 /*-------------------------------------
 글라스몰,네이버스토어,esg 아이콘 css
 ---------------------------------------*/
