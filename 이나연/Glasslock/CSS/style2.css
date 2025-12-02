@@ -199,11 +199,59 @@ section.visual nav .logo img {
 .technology .tit {
   margin-bottom: 70px;
 }
+
 .technology .tit span {
   font-size: 40px;
   font-weight: 700;
 }
 
+/*이미지+텍스트*/
+.technology .explain {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.technology .explain img {
+  width: 450px;
+  margin-bottom: 40px;
+}
+
+.technology .explain h3 {
+  font-size: 27px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.technology .explain .txt h3 em {
+  font-size: 18px;
+  font-style: normal;
+  margin-left: 5px;
+  color: #888;
+}
+.technology .explain .txt span {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.technology .tech_img {
+  width: 50%;
+  height: 500px;
+  background-image: url("../imges/tech_bg1.jpg");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.technology .content_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /*-------------------------------------
 글라스몰,네이버스토어,esg 아이콘 css
 ---------------------------------------*/
