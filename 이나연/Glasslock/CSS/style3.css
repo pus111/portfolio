@@ -53,7 +53,7 @@ section {
 }
 section.visual {
   position: relative;
-  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
+  background-image: url("../imges/bg_esg.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -89,19 +89,32 @@ section.visual nav .logo img {
   display: block;
   margin: 0 auto;
 }
-
-.txt h4 {
-  font-size: 45px;
-  font-weight: 300;
+.txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 50px;
 }
-.txt span {
+.txt em {
+  font-size: 18px;
+  display: inline-block;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-style: normal;
+}
+.txt h3 {
+  font-size: 40px;
+  font-weight: normal;
+  margin: 40px 0 20px;
+}
+
+.txt p {
   line-height: 150%;
   margin-top: 20px;
   display: block;
-  text-align: center;
   font-size: 20px;
+  color: #555;
 }
 
 section.visual nav .right {
@@ -145,9 +158,11 @@ section.visual nav .right .hambuger label span {
   margin: 9px 0;
   transition: 0.5s;
 }
-section.visual h1 {
+
+section.visual h2 {
   color: #fff;
-  font-size: 90px;
+  font-size: 80px;
+  font-weight: 300;
 }
 #menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
   transform: translate(0, 11px) rotate(45deg);
