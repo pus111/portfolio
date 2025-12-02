@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>글라스락</title>
     <link rel="stylesheet" href="css/style2.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="../Glasslock/js/main.js"></script>
   </head>
   <body>
     <section>
@@ -21,7 +23,7 @@
         <li><a href="./index.html">INNOVATION</a></li>
         <li><a href="#">BRANDS</a></li>
         <li><a href="#">PRODUCTS</a></li>
-        <li><a href="#">ESG</a></li>
+        <li><a href="./esg.html">ESG</a></li>
         <li><a href="#">CAREER</a></li>
       </ul>
     </div>
@@ -41,7 +43,7 @@
             <a href="#">
               <span
                 ><img
-                  src="../Glasslock/imges/ico_topmall_cart_bk.svg"
+                  src="../Glasslock/imges/ico_topmall_cart.png"
                   alt="cart" /></span
               >글라스몰
             </a>
@@ -62,10 +64,10 @@
 
       <!-- 가운데 중간로고 -->
       <div class="logo_area">
-        <div class="logoimg ">
+        <div class="logoimg" data-aos="fade-up" data-aos-duration="1000">
          <img src="../Glasslock/imges/top_logo_blue.svg" alt="가운데 중간로고">
         </div>
-        <div class="txt_box">
+        <div class="txt_box"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
            <p>대한민국 <samp>1등</samp> 유리밀페용기</p>
            <h4>글라스락</h4>
         </div>
@@ -93,14 +95,14 @@
 <!--글라스락에 대한 설명-->
    <div class="sub_cont">
     <section class="con1">
-        <div class="inner">
+        <div class="inner" data-aos="fade-up">
             <img src="../Glasslock/imges/logo_glasslock.png" alt="img1">
            <div class="txt">
             <h4>글라스락은</h4>
             <span>아시아 최대 규모의 논산공장에서 100% 국내 생산되는 유리밀폐용기로<br> 국내는 물론, 북미와 유럽, 중국과 아시아를 비롯한 세계 90여 개국에서<br> 시간당 7,200개가 판매되는 국내 시장 점유율 <em>1위</em> 의 글로벌 브랜드입니다.</span>
              </div>
              </div>
-              <div class="feature">
+              <div class="feature" data-aos="fade-up" data-aos-delay="300">
               <span>
                 22년 7월~ 23년 6월 닐스 스캔트랙(할인점+체인수퍼+조합마트)기준
               </span>
@@ -115,7 +117,7 @@
         </div>
 
        <div class="content_box">
-         <div class="explain">
+         <div class="explain" data-aos="fade-up" data-aos-duration="1200">
            <img src="../Glasslock/imges/ico_technology.svg" alt="템퍼맥스">
             <div class="txt">
              <h3>템퍼맥스<em>(TEMPERMAX™)</em></h3>
@@ -129,7 +131,7 @@
        </div>
     </section>
        
-<!--하단-->
+ <!--하단-->
       <footer id="max_footer">
       <div class="gnb_inner">
       <div class="footer_left">
@@ -156,8 +158,19 @@
       <p class="copy">COPYRIGHTⓒ 2024 SGC SOLUTIONS CO., LTD. ALL RIGHTS RESERVED.</p>
     </div>
   </div>
-</footer>
+  </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // 초기세팅값
+      AOS.init({
+        offset: 120, // 120 = 기본값
+        delay: 1000,
+        easing: "ease",
+        duration: 2000,
+      });
+    </script>
   </body>
 
-</script>
+<!-- </script> -->
 </html>

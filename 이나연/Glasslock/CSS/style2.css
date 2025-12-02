@@ -187,15 +187,32 @@ section.visual nav .logo img {
   padding: 120px 0;
   position: relative;
 }
-
+/* 
 .technology .inner {
   width: 1400px;
   margin: 0 auto;
   position: relative;
   display: flex;
-  flex-direction: column; /* 제목은 위, 콘텐츠는 아래 */
+  flex-direction: column; 
+  z-index: 2;
+} */
+.technology .inner {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.technology .content_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology .explain {
   z-index: 2;
 }
+
 .technology .tit {
   margin-bottom: 70px;
 }
@@ -264,11 +281,12 @@ section.visual nav .right .mall {
   height: 28px;
   line-height: 28px;
   padding: 0 20px;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 30px;
 }
+
 section.visual nav .right .mall a {
-  color: #fff;
+  color: #000;
 }
 section.visual nav .right .mall img {
   width: 20px;
@@ -277,12 +295,12 @@ section.visual nav .right .mall img {
   vertical-align: middle;
 }
 section.visual nav .right .lang a {
-  color: #fff;
+  color: #000;
   display: block;
   /* text-decoration: underline;
   text-decoration-color: #fff;
   text-underline-offset: 10px; */
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #000;
   padding: 10px;
 }
 section.visual nav .right .hambuger label {
@@ -292,12 +310,12 @@ section.visual nav .right .hambuger label span {
   display: block;
   width: 35px;
   height: 2px;
-  background: #fff;
+  background: #000;
   margin: 9px 0;
   transition: 0.5s;
 }
 section.visual h1 {
-  color: #fff;
+  color: #000;
   font-size: 90px;
 }
 #menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
@@ -330,6 +348,12 @@ section.visual h1 {
   right: 100px;
   bottom: 50px;
   cursor: pointer;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 사라짐 애니메이션 추가 */
+}
+#mall_btn.hide {
+  opacity: 0; /* 투명하게 */
+  transform: translateY(50px); /* 살짝 아래로 이동 */
+  pointer-events: none; /* 클릭 방지 */
 }
 #mall_btn ul {
   border-radius: 40px 40px;
