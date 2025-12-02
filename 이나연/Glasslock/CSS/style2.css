@@ -83,7 +83,10 @@ section.visual nav .logo img {
   filter: none !important;
 }
 
-/*중간 로고 */
+/*--------------------------------
+중간 로고 
+----------------------------------*/
+
 .logo_area {
   display: flex;
   flex-direction: column;
@@ -100,7 +103,7 @@ section.visual nav .logo img {
   margin-left: 100px;
 }
 
-/* 텍스트 박스 */
+/* 중간 로고 텍스트 박스 */
 .visual .logo_area .txt_box p {
   font-size: 36px;
   margin: 0;
@@ -120,29 +123,65 @@ section.visual nav .logo img {
   margin-left: 100px;
   margin-bottom: 5px;
 }
-
-.con img {
-  width: 100%;
-  max-width: 1280px;
-  height: 470px;
-  display: block;
+/*--------------------------
+글라스락에 대한 설명 
+----------------------------*/
+.sub_cont .con1 .inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /*feature 가운데 있다가 옆으로 감*/
+  gap: 100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 300px 40px 20px;
+  box-sizing: border-box;
 }
 
-.txt h4 {
-  font-size: 45px;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 50px;
-}
-.txt span {
-  line-height: 150%;
-  margin-top: 20px;
+.sub_cont .con1 img {
+  width: 380px;
+  height: auto;
   display: block;
-  text-align: center;
-  font-size: 20px;
 }
 
+.sub_cont .con1 .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sub_cont .con1 .txt h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.sub_cont .con1 .txt span {
+  display: block;
+  font-size: 18px;
+  line-height: 150%;
+  color: #444;
+  margin-top: 10px;
+}
+.sub_cont .con1 .txt em {
+  position: relative;
+  padding-right: 10px;
+}
+
+/* feature – 작은 설명 */
+.sub_cont .con1 .feature {
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 250px;
+  /* margin-bottom: 20px; */
+}
+.sub_cont .con1 .feature span {
+  display: block;
+}
+
+/*-------------------------------------
+글라스몰,네이버스토어,esg 아이콘 css
+---------------------------------------*/
 section.visual nav .right {
   display: flex;
   gap: 40px;
@@ -250,6 +289,13 @@ section.visual h1 {
 #mall_btn:hover ul li:first-child {
   display: none;
 }
+/*-------------------------------------
+글라스몰,네이버스토어,esg 아이콘 css 끝 
+---------------------------------------*/
+
+/*---------------------------------------
+푸터 부분 css
+-----------------------------------------*/
 #max_footer {
   padding: 50px 0;
   background: #fff;
@@ -259,10 +305,11 @@ section.visual h1 {
 
 .gnb_inner {
   max-width: 1720px;
-  margin: 0 auto;
-  display: flex;
+  /* margin: 0 auto;
+  display: flex; */
   justify-content: space-between;
   align-items: flex-start;
+  padding: ;
 }
 
 /* 왼쪽 구성 */
