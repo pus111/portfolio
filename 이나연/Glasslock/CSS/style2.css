@@ -124,7 +124,7 @@ section.visual nav .logo img {
   margin-bottom: 5px;
 }
 /*--------------------------
-글라스락에 대한 설명 
+글라스락에 대한 첫번째 설명 
 ----------------------------*/
 .sub_cont .con1 .inner {
   display: flex;
@@ -178,6 +178,10 @@ section.visual nav .logo img {
 .sub_cont .con1 .feature span {
   display: block;
 }
+
+/*--------------------------
+글라스락에 대한 두번째 설명 
+----------------------------*/
 
 /*-------------------------------------
 글라스몰,네이버스토어,esg 아이콘 css
