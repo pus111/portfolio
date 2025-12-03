@@ -86,7 +86,6 @@ a {
 .menu-right {
   display: flex;
   justify-content: flex-end;
-
   border-radius: 10px;
   margin-bottom: 20px;
 }
