@@ -1,0 +1,137 @@
+@charset "utf-8"
+
+/* 1️⃣ max-width: 1750px */
+@media screen and (max-width: 1750px) {
+  .notice {
+    width: 550px;
+  }
+  .Reviews {
+    width: 450px;
+  }
+}
+
+/* 2️⃣ max-width: 1400px */
+@media screen and (max-width: 1400px) {
+  .secondwap {
+    padding: 80px 50px 100px;
+  }
+  .notice {
+    width: 500px;
+    padding: 20px;
+  }
+  .Reviews {
+    width: 400px;
+    padding: 20px;
+  }
+  .secondwap .wap {
+    gap: 30px;
+  }
+}
+
+/* 3️⃣ max-width: 1120px */
+@media screen and (max-width: 1120px) {
+  .secondwap .wap {
+    flex-direction: column; /* 세로 배치 */
+    align-items: center;
+    gap: 30px;
+  }
+  .notice,
+  .Reviews {
+    width: 80%; /* 화면 비율에 맞춰 */
+  }
+  .secondwap {
+    padding: 60px 30px 80px;
+  }
+  .second h2 {
+    font-size: 28px;
+  }
+}
+
+/* 4️⃣ max-width: 768px (모바일) */
+@media screen and (max-width: 768px) {
+  /* secondwap 영역 padding 조정 */
+  .secondwap {
+    padding: 40px 15px 60px;
+  }
+
+  /* 제목 글자 크기 축소 */
+  .second h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* 카드 영역 */
+  .wap {
+    flex-direction: column; /* 카드 세로 배치 */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .notice,
+  .Reviews {
+    width: 100%; /* 모바일 화면에 맞춤 */
+    padding: 15px; /* 카드 패딩 축소 */
+    box-sizing: border-box;
+  }
+
+  /* 카드 제목 글자 크기 축소 */
+  .notice h2,
+  .Reviews h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  /* 표 글자 축소 */
+  table td {
+    font-size: 14px;
+  }
+
+  /* secimg 이미지 크기 조정 */
+  .secimg img {
+    width: 80px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* 탭 콘텐츠 세로 배치 */
+  .tab-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tab-content {
+    width: 100%;
+  }
+
+  .tab-content .img-box {
+    width: 90%; /* 화면 비율에 맞춤 */
+    margin: 0 auto; /* 가운데 정렬 */
+  }
+
+  .tab-content .img-box img {
+    width: 100%; /* 박스에 맞게 이미지 늘리기 */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .tab-content .img-box h3.title {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .tab-content .img-box .detail p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* 프로그램 탭 ul li 글자 줄이기 */
+  .tabs ul li {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
