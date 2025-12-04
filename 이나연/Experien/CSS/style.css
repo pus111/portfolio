@@ -492,15 +492,9 @@ a {
   transform: scale(1.2);
 } */
 
-/*------------------------------
-체험프로그램
------------------------------*/
-.program {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 50px 0;
+.program-inner {
+  padding: 100px;
 }
-
 /* ─────────── 헤더 ─────────── */
 .header {
   display: flex;
@@ -524,13 +518,14 @@ a {
 }
 .tabs ul li {
   padding: 10px 20px;
-  background: #eee;
-  border-radius: 20px;
+  /* background: #eee; */
+  border-radius: 50px;
+  border: 2px solid #00a2eb;
   cursor: pointer;
   transition: 0.3s;
 }
 .tabs ul li.on {
-  background: #173d81;
+  background: #00a2eb;
   color: #fff;
 }
 
@@ -585,7 +580,8 @@ a {
   left: 0;
   bottom: -120%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.55);
+  /* width: 500px; */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   padding: 18px 20px;
   color: #fff;
@@ -612,8 +608,9 @@ a {
 }
 
 .detail samp {
-  color: #ffe56f;
-  font-weight: 700;
+  font-size: 20px;
+  color: #ffef14;
+  font-weight: 900;
   margin-bottom: 6px;
 }
 
@@ -630,6 +627,9 @@ a {
 }
 .wap {
   display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
 }
 /* 소식통 제목 */
 .second h2 {
@@ -685,13 +685,16 @@ a {
   margin-bottom: 10px;
 }
 
-.notice h2 .icon {
+.notice h2 .img,
+.Reviews h2 .img {
   width: 22px;
   height: 22px;
-  display: inline-block;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
-
+.notice h2 .img:hover,
+.Reviews h2 .img:hover {
+  transform: scale(1.25);
+}
 .secimg {
   position: absolute;
   right: 0;
@@ -725,7 +728,7 @@ a:hover {
 /*하단*/
 .footer {
   width: 100%;
-  background: url("../img/footer_bg.png");
+  background: url("../imges/footer_bg2.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
