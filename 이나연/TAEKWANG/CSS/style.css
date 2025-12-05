@@ -9,58 +9,135 @@ a {
   text-decoration: none;
 }
 
-/* 헤더 */
-.tk-header {
+/* 헤더 전체 */
+header {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 9999;
+  z-index: 999;
   background: transparent;
 }
 
-.tk-inner {
-  max-width: 1400px;
+.top {
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 20px 40px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 22px 40px;
+  transition: 0.3s;
 }
 
-.tk-logo img {
-  height: 36px;
+.logo img {
+  width: 200px;
+  transition: 0.3s;
 }
 
-/* 메뉴 */
-.tk-menu {
-  display: flex;
-  gap: 60px;
+/* 메뉴 ------------------------------------------------- */
+.menu {
+  position: relative;
+  /* background: transparent; */
 }
-.tk-menu > ul {
+
+.menu > ul {
   display: flex;
-  width: 100%;
-  height: 50px;
+  gap: 50px;
+  /* background: transparent; */
 }
-.tk-menu > ul > li {
-  flex: 1;
-  text-align: center;
+
+.menu > ul > li {
   position: relative;
 }
-.tk-menu a {
+
+.menu > ul > li > a {
+  display: block;
+  padding: 15px 0;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
+  /* background: transparent; */
+  transition: 0.3s;
 }
 
-/* 오른쪽 버튼 */
-.tk-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* 메인 메뉴 호버 시 글씨색 */
+.menu > ul > li:hover > a {
+  color: #000;
+}
+
+/* 서브메뉴 ------------------------------------------------- */
+.sub {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 0;
+  overflow: hidden;
+  background: transparent;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.sub li a {
+  display: block;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff; /* 서브 기본 회색 */
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.sub li a:hover {
+  color: #b49859; /* 호버 시 갈색 */
+  font-weight: 900;
+}
+
+/* 메뉴 전체 hover 시 서브메뉴 열림 */
+.menu:hover .sub {
+  height: 220px;
+}
+
+/* 전체 펼쳐지는 흰색 배경 바 -------------------------------------------------
+.bg {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  width: 100vw; 
+  height: 0;
+  background: #fff;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+
+.menu:hover .bg {
+  height: 250px;
+} */
+
+/* =====================================
+   메뉴 hover 시 전체 스타일 변화
+===================================== */
+
+/* 1) 메인 글자 색 → 검정 */
+.menu:hover > ul > li > a {
+  color: #000;
+}
+
+/* 2) 로고 이미지 변경 (호버 시 흰배경용 로고) */
+.menu:hover ~ .top .logo img,
+header:hover .logo img {
+  content: url("../imges/header_logo.svg"); /* ✨ 원하는 이미지로 변경 */
+}
+
+/* 오른쪽 버튼 ------------------------------------------------- */
+.tk-right a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 .tk-biz-btn {
