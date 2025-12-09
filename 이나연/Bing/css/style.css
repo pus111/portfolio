@@ -8,8 +8,85 @@ ul {
 }
 a {
   text-decoration: none;
+  color: black;
 }
+
+/* 헤더 */
 .header {
   position: absolute;
   top: 0;
+  width: 100%;
+  z-index: 101;
+  transition: height 0.8s;
+}
+
+/* ──────────────── 1. 맨 위 오른쪽 영역 ──────────────── */
+.header_top {
+  border-bottom: 1px solid #ddd;
+  padding: 0 80px;
+}
+
+.header_top .center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+/* ──────────────── 2. 로고 + 메뉴 + KR + 햄버거 ──────────────── */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 80px;
+  gap: 40px;
+}
+
+/* 로고 */
+.sec01_logo img {
+  height: 50px;
+}
+
+/* 메뉴 */
+.sec02 .depth {
+  display: flex;
+  gap: 40px;
+}
+
+.sec02 .depth li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.right_group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 언어 선택 */
+.esc03 .lang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 햄버거 버튼 */
+.hamberger {
+  cursor: pointer;
+}
+.hamberger a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamberger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  display: block;
+  border-radius: 2px;
 }
