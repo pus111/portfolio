@@ -198,3 +198,79 @@ a {
   color: #555;
   background: #fff;
 }
+
+/* 두번째 섹션 전체 */
+.seciton2 {
+  position: relative;
+  width: 100%;
+  margin: 100px 0;
+}
+
+.sec02 {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 제목 */
+.sectxt {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 70px;
+  text-align: center;
+  line-height: 1.5px;
+}
+
+/* 화살표 공통 */
+.arrow_left,
+.arrow_rig {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 왼쪽 화살표 */
+.arrow_left {
+  left: -70px; /* 원하는 만큼 이동 */
+}
+
+/* 오른쪽 화살표 */
+.arrow_rig {
+  right: -70px; /* 원하는 만큼 이동 */
+}
+
+/* 슬라이드 영역 */
+.slider_wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 실제 움직이는 슬라이드 */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* 각 아이템 */
+.item {
+  width: 200px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.item img {
+  width: 150px;
+  height: auto;
+}
+
+.item_txt {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
