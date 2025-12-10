@@ -1,4 +1,10 @@
 @charset "utf-8";
+@font-face {
+  font-family: "Binggre";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Binggrae-Bold.woff2")
+    format("woff2");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +16,8 @@ a {
   text-decoration: none;
   color: black;
 }
-.front_header {
-}
+/* .front_header {
+} */
 /* 헤더 */
 .header {
   position: absolute;
@@ -220,6 +226,7 @@ a {
   margin-bottom: 70px;
   text-align: center;
   line-height: 1.5px;
+  font-family: "Binggre";
 }
 
 /* 화살표 공통 */
@@ -255,22 +262,71 @@ a {
 .slider {
   display: flex;
   transition: transform 0.5s ease;
+  gap: 20px;
 }
-
-/* 각 아이템 */
+/* 카드 전체 */
 .item {
   width: 200px;
+  min-height: 240px;
   text-align: center;
   flex-shrink: 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 0 20px;
+  transition: transform 0.45s ease;
 }
 
+/* 이미지 */
 .item img {
-  width: 150px;
+  width: 100%;
   height: auto;
+  transition: transform 0.45s ease;
 }
 
+/* 기본 텍스트 박스 */
 .item_txt {
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 12px;
+  padding: 10px 15px;
+
+  display: block; /*  너비 전체 사용 */
+  width: 100%; /* 이미지 박스와 동일한 너비 */
+  box-sizing: border-box; /*  padding 포함해 폭 유지 */
+
+  background: #f9f9f9;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+
+  font-size: 0; /* 기본 텍스트 숨김 */
+  transition: all 0.45s ease;
+}
+
+/* 기본 텍스트 출력 (::after로 출력) */
+.item_txt::after {
+  content: attr(data-text);
+  font-size: 17px;
   color: #333;
+  transition: all 0.45s ease;
+}
+
+/* hover — 카드 전체 올라감 */
+.item:hover {
+  transform: translateY(-12px);
+}
+
+/* hover — 이미지도 부드럽게 위로 */
+.item:hover img {
+  transform: translateY(-8px);
+}
+
+/* hover — 텍스트 박스에 VIEW MORE 표시 */
+.item:hover .item_txt {
+  background: linear-gradient(90deg, #ff4e4e, #ff2e2e);
+  border-color: #ff3a3a;
+}
+
+.item:hover .item_txt::after {
+  content: "VIEW MORE";
+  color: #fff;
+  font-size: 17px;
 }
