@@ -1,37 +1,51 @@
 const slider = document.querySelector(".slider");
 const items = document.querySelectorAll(".item");
+const sliderWrap = document.querySelector(".slider_wrap");
+const btnLeft = document.querySelector(".arrow_left");
+const btnRight = document.querySelector(".arrow_rig");
 
 let index = 0;
 
-// ⭐ 아이템 실제 너비(px) 자동 계산
-const itemWidth = items[0].offsetWidth;
+// 슬라이드 관련 계산
+function updateSliderParams() {
+  const itemWidth = items[0].offsetWidth;
+  const sliderStyle = window.getComputedStyle(slider);
+  const gap = parseInt(sliderStyle.gap) || 0;
+  const moveWidth = itemWidth + gap;
 
-// ⭐ slider에 gap이 있으면 자동 계산
-const sliderStyle = window.getComputedStyle(slider);
-const gap = parseInt(sliderStyle.gap) || 0;
+  const visibleCount = Math.floor(sliderWrap.offsetWidth / moveWidth);
+  const totalWidth = items.length * moveWidth - gap;
+  const maxTranslate = Math.max(0, totalWidth - sliderWrap.offsetWidth);
 
-// ⭐ 최종 이동 간격
-const moveWidth = itemWidth + gap;
+  return { moveWidth, visibleCount, maxTranslate };
+}
 
-// ⭐ 화면에 몇 개 보이는지 자동 체크
-const sliderWrap = document.querySelector(".slider_wrap");
-const visibleCount = Math.floor(sliderWrap.offsetWidth / moveWidth);
+// 슬라이드 이동
+function moveSlider() {
+  const { moveWidth, maxTranslate } = updateSliderParams();
 
-// ⭐ 마지막 index 정확하게 계산
-const maxIndex = items.length - visibleCount;
+  let translateX = index * moveWidth;
+  if (translateX < 0) translateX = 0;
+  if (translateX > maxTranslate) translateX = maxTranslate;
 
-// 왼쪽
-document.querySelector(".arrow_left").addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    slider.style.transform = `translateX(-${index * moveWidth}px)`;
-  }
+  slider.style.transform = `translateX(-${translateX}px)`;
+}
+
+// 버튼 이벤트
+btnLeft.addEventListener("click", () => {
+  index--;
+  moveSlider();
+});
+btnRight.addEventListener("click", () => {
+  index++;
+  moveSlider();
 });
 
-// 오른쪽
-document.querySelector(".arrow_rig").addEventListener("click", () => {
-  if (index < maxIndex) {
-    index++;
-    slider.style.transform = `translateX(-${index * moveWidth}px)`;
-  }
+// 반응형
+window.addEventListener("resize", moveSlider);
+
+// 초기 위치
+window.addEventListener("load", () => {
+  index = 0;
+  moveSlider();
 });
