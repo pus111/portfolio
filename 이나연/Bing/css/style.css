@@ -48,84 +48,64 @@ a {
 }
 
 /* =============================
-   Header Layout --> 메뉴 헤드 레이 아웃
+   Header Layout --> 메뉴 헤드 레이아웃
 ============================= */
-
+/* =======================
+    헤더 기본 스타일
+======================= */
 .header {
-  width: 100%;
-  /* border-bottom: 1px solid #eee; */
   position: relative;
-  z-index: 1000;
+  width: 100%;
+  background: transparent; /* 기본 투명 */
+  transition: background 0.3s ease, height 0.3s ease;
+  z-index: 9999;
 }
 
 .header-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
-
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  overflow: visible;
 }
 
-/* 로고 */
-.logo img {
-  height: 48px;
+/* 헤더 전체 hover → 배경 흰색 */
+.header:hover {
+  background: #fff;
+  height: auto;
 }
 
-/* 오른쪽 영역 */
-.right-menu {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.right-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.hamburger {
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* =============================
-   Menu + Submenu
-============================= */
-
+/* =======================
+    메뉴 그룹
+======================= */
 .menu {
   position: relative;
-  z-index: 100;
 }
 
-.menu .depth {
+.depth {
   display: flex;
   gap: 40px;
   list-style: none;
-  padding: 0;
-  margin: 0;
   align-items: center;
 }
 
-/* 1차 메뉴 */
-.menu .depth > li > a {
+.depth > li {
+  position: relative;
+}
+
+.depth > li > a {
   display: block;
-  padding: 35px 10px;
-  font-size: 18px;
-  font-weight: 500;
+  padding: 10px 0;
   color: #333;
-  transition: color 0.3s;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-/* 1차 메뉴 hover → 주황색 */
-.menu .depth > li:hover > a {
-  color: #ff7f00;
-}
-
-/* 서브 메뉴 */
+/* =======================
+    서브메뉴
+======================= */
 .sub_depth {
   position: absolute;
   top: 100%;
@@ -157,15 +137,32 @@ a {
   display: block;
   padding: 10px 22px;
   font-size: 15px;
-  font-weight: 300; /* 얇게 */
+  font-weight: 400;
   color: #333;
   transition: 0.25s color, 0.25s background;
 }
 
-/* 서브 메뉴 hover → 글자 주황색 + 얇게 유지 */
+/* 서브 메뉴 hover */
 .sub_depth li a:hover {
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
   color: #ff7f00;
+}
+
+/* =======================
+    오른쪽 메뉴
+======================= */
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-menu a {
+  color: #333;
+}
+
+.hamburger {
+  cursor: pointer;
 }
 
 /* li 위치 기준 */
@@ -200,7 +197,7 @@ a {
 }
 .hamberger span {
   width: 25px;
-  height: 3px;
+  height: 5px;
   background: #000;
   display: block;
   border-radius: 2px;
