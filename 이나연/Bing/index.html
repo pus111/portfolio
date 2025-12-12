@@ -19,112 +19,101 @@
             <li><img src="./imgs/link_arrow03.png" alt="arrow2" /></li>
           </ul>
         </div>
+
+<!--헤드 메뉴부분 시작 -->
+
 <header class="header">
+  <div class="inner">
 
-  <!-- ============================
-        1) 상단 헤더 영역
-     ============================ -->
-  <div class="header-inner">
+    <!-- 1. 로고 -->
+    <h1 class="logo">
+      <a href="#"><img src="./imgs/logo.png" alt="빙그레 로고"></a>
+    </h1>
 
-    <!-- 1-1. 로고 -->
-    <div class="logo">
-      <img src="./imgs/logo.png" alt="빙그레 로고" />
-    </div>
-
-    <!-- 1-2. 메인 메뉴 -->
+    <!-- 2. 메뉴 -->
     <nav class="gnb">
-      <ul class="depth1">
-        <li data-menu="menu1"><a href="#">회사소개</a></li>
-        <li data-menu="menu2"><a href="#">제품소개</a></li>
-        <li data-menu="menu3"><a href="#">지속가능경영</a></li>
-        <li data-menu="menu4"><a href="#">투자정보</a></li>
-        <li data-menu="menu5"><a href="#">뉴스룸</a></li>
-        <li data-menu="menu6"><a href="#">고객센터</a></li>
+      <ul>
+        <li>
+          <a href="#">회사소개</a>
+          <ul class="sub">
+            <li><a href="#">경영이념</a></li>
+            <li><a href="#">사업분야</a></li>
+            <li><a href="#">히스토리</a></li>
+            <li><a href="#">CEO 인사말</a></li>
+            <li><a href="#">사업장소개</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">제품</a>
+          <ul class="sub">
+            <li><a href="#">아이스크림</a></li>
+            <li><a href="#">우유/치즈</a></li>
+            <li><a href="#">발효유</a></li>
+            <li><a href="#">커피</a></li>
+            <li><a href="#">주스</a></li>
+            <li><a href="#">음료</a></li>
+            <li><a href="#">스낵/디저트</a></li>
+            <li><a href="#">건강지향</a></li>
+            <li><a href="#">수출제품</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">ESG</a>
+          <ul class="sub">
+            <li><a href="#">지속가능경영 체계</a></li>
+            <li><a href="#">Eco-Friendly</a></li>
+            <li><a href="#">Shared Value</a></li>
+            <li><a href="#">Global Integrity</a></li>
+            <li><a href="#">윤리준법경영</a></li>
+            <li><a href="#">사회공헌</a></li>
+            <li><a href="#">보고서 및 정책</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">IR</a>
+          <ul class="sub">
+            <li><a href="#">재무정보</a></li>
+            <li><a href="#">주식정보</a></li>
+            <li><a href="#">전자공고</a></li>
+            <li><a href="#">공시정보</a></li>
+            <li><a href="#">IR자료실</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">뉴스</a>
+          <ul class="sub">
+            <li><a href="#">새소식</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">빙그레 스토리</a></li>
+            <li><a href="#">미디어 라이브러리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객센터</a>
+          <ul class="sub">
+            <li><a href="#">고객상담</a></li>
+            <li><a href="#">제품공급문의</a></li>
+            <li><a href="#">사이버 신고센터</a></li>
+            <li><a href="#">안전신문고</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
-    <!-- 1-3. 오른쪽 영역 -->
+    
+
+    <!-- 4. 오른쪽 메뉴 -->
     <div class="right-menu">
       <a href="#">KR</a>
+      <img src="./imgs/lang_btn.png" alt="">
       <div class="ham">☰</div>
     </div>
 
-  </div> <!-- header-inner 끝 -->
-
-
-  <!-- =============================
-         2) 펼쳐지는 서브메뉴 전체 박스
-         (🚨 반드시 header-inner 바로 아래!)
-     ============================= -->
-  <div class="sub-bg">
-    <div class="sub-inner">
-
-      <!-- menu1 -->
-      <ul class="sub-menu" data-target="menu1">
-        <li><a href="#">경영이념</a></li>
-        <li><a href="#">사업분야</a></li>
-        <li><a href="#">히스토리</a></li>
-        <li><a href="#">CEO 인사말</a></li>
-        <li><a href="#">사업장소개</a></li>
-      </ul>
-
-      <!-- menu2 -->
-      <ul class="sub-menu" data-target="menu2">
-        <li><a href="#">아이스크림</a></li>
-        <li><a href="#">우유/치즈</a></li>
-        <li><a href="#">발효유</a></li>
-        <li><a href="#">커피</a></li>
-        <li><a href="#">주스</a></li>
-        <li><a href="#">음료</a></li>
-        <li><a href="#">스낵/디저트</a></li>
-        <li><a href="#">건강지향</a></li>
-        <li><a href="#">수출제품</a></li>
-      </ul>
-
-      <!-- menu3 -->
-      <ul class="sub-menu" data-target="menu3">
-        <li><a href="#">지속가능경영 체계</a></li>
-        <li><a href="#">Eco-Friendly</a></li>
-        <li><a href="#">Shared Value</a></li>
-        <li><a href="#">Global Integrity</a></li>
-        <li><a href="#">윤리준법경영</a></li>
-        <li><a href="#">사회공헌</a></li>
-        <li><a href="#">보고서 및 정책</a></li>
-      </ul>
-
-      <!-- menu4 -->
-      <ul class="sub-menu" data-target="menu4">
-        <li><a href="#">재무정보</a></li>
-        <li><a href="#">주식정보</a></li>
-        <li><a href="#">전자공고</a></li>
-        <li><a href="#">공시정보</a></li>
-        <li><a href="#">IR자료실</a></li>
-      </ul>
-
-      <!-- menu5 -->
-      <ul class="sub-menu" data-target="menu5">
-        <li><a href="#">새소식</a></li>
-        <li><a href="#">보도자료</a></li>
-        <li><a href="#">빙그레 스토리</a></li>
-        <li><a href="#">미디어 라이브러리</a></li>
-      </ul>
-
-      <!-- menu6 -->
-      <ul class="sub-menu" data-target="menu6">
-        <li><a href="#">고객상담</a></li>
-        <li><a href="#">제품공급문의</a></li>
-        <li><a href="#">사이버 신고센터</a></li>
-        <li><a href="#">안전신문고</a></li>
-        <li><a href="#">개인정보처리방침</a></li>
-      </ul>
-
-    </div> <!-- sub-inner 끝 -->
-  </div> <!-- sub-bg 끝 -->
-
+  </div>
+  <!-- 3. 전체 서브 백그라운드 -->
+    <div class="sub-bg"></div>
 </header>
-
-
-
 
 <!------ 헷갈림 방지 선----- -->
 

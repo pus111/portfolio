@@ -1,3 +1,28 @@
+/*----------------- 헷갈림 방지선 -----------------*/
+
+// 햄버거 클릭 시 메뉴 토글
+const ham = document.querySelector(".ham");
+const gnb = document.querySelector(".gnb");
+
+ham.addEventListener("click", () => {
+  gnb.classList.toggle("open");
+});
+
+// 모바일용 서브 메뉴 클릭 열기 (선택사항)
+document.querySelectorAll(".gnb > ul > li > a").forEach((menu) => {
+  menu.addEventListener("click", (e) => {
+    const parentLi = e.target.parentElement;
+    const sub = parentLi.querySelector(".sub");
+    if (sub) {
+      e.preventDefault();
+      sub.classList.toggle("open");
+    }
+  });
+});
+
+/*----------------- 헷갈림 방지선 -----------------*/
+
+/*행복한 빙그래의 맛 슬라이드 js*/
 const slider = document.querySelector(".slider");
 const items = document.querySelectorAll(".item");
 const sliderWrap = document.querySelector(".slider_wrap");
@@ -30,56 +55,3 @@ function moveSlider() {
 
   slider.style.transform = `translateX(-${translateX}px)`;
 }
-
-// 버튼 이벤트
-btnLeft.addEventListener("click", () => {
-  index--;
-  moveSlider();
-});
-btnRight.addEventListener("click", () => {
-  index++;
-  moveSlider();
-});
-
-// 반응형
-window.addEventListener("resize", moveSlider);
-
-// 초기 위치
-window.addEventListener("load", () => {
-  index = 0;
-  moveSlider();
-});
-
-/* 메인 메뉴 요소 */
-const menuItems = document.querySelectorAll(".depth1 > li");
-
-/* 서브 배경 */
-const subBg = document.querySelector(".sub-bg");
-
-/* 모든 서브 메뉴 */
-const subMenus = document.querySelectorAll(".sub-menu");
-
-/* 메뉴 hover */
-menuItems.forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    const target = item.getAttribute("data-menu");
-
-    // 전체 서브메뉴 숨김
-    subMenus.forEach((sub) => sub.classList.remove("active"));
-
-    // 해당 서브메뉴만 표시
-    const activeMenu = document.querySelector(
-      `.sub-menu[data-target="${target}"]`
-    );
-    if (activeMenu) activeMenu.classList.add("active");
-
-    // 배경 펼치기
-    subBg.classList.add("active");
-  });
-});
-
-/* 헤더 영역에서 마우스가 나가면 서브 닫기 */
-document.querySelector(".header").addEventListener("mouseleave", () => {
-  subBg.classList.remove("active");
-  subMenus.forEach((m) => m.classList.remove("active"));
-});

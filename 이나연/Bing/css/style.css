@@ -33,138 +33,151 @@ a {
   padding: 5px 0;
 }
 
-/* 전체 초기화 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #333;
-}
+/*--------------- 헷갈림 방지 선 -------------*/
 
-/******************************************
-  HEADER
-******************************************/
+/*헤드 메뉴부분 시작*/
+
 .header {
   width: 100%;
-  border-bottom: 1px solid #eee;
+  background: #fff;
   position: relative;
-
-  z-index: 1000;
+  z-index: 100;
 }
 
-.header-inner {
-  width: 1400px;
-  margin: 0 auto;
-  height: 80px;
+.inner {
+  /* max-width: 1380px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 0 40px;
+  height: 90px;
   display: flex;
   align-items: center;
+  position: relative;
+
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-/* 로고 */
 .logo img {
-  height: 38px;
-}
-
-/******************************************
-  메인 메뉴 (GNB)
-******************************************/
-.gnb .depth1 {
-  display: flex;
-  gap: 60px;
-}
-
-.gnb .depth1 > li > a {
-  font-size: 18px;
-  font-weight: 600;
+  height: 32px;
   display: block;
-  padding: 10px 0;
+}
+
+/* 메뉴 중앙 */
+.gnb {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* 메뉴 중앙 */
+}
+
+.gnb > ul {
+  display: flex;
+  gap: 100px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gnb > ul > li {
   position: relative;
 }
 
-/******************************************
-  우측 메뉴
-******************************************/
+.gnb > ul > li > a {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 30px 0;
+  color: #222;
+  display: block;
+
+  position: relative;
+
+  /* line-height: 1; */
+}
+
+.gnb > ul > li:hover > a {
+  color: #e60012;
+}
+
+/* 서브 메뉴 */
+.sub {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 180px;
+  background: #fff;
+  padding: 15px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.sub li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #444;
+
+  transition: 0.25s;
+}
+
+.sub li a:hover {
+  color: #e60012;
+}
+
+/* hover 시 서브 메뉴 표시 */
+.gnb > ul > li:hover .sub {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/*  전체 서브 배경*/
+.sub-bg {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  opacity: 0;
+  transition: 0.25s ease;
+  z-index: 1;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gnb:hover ~ .sub-bg {
+  height: 260px;
+  opacity: 1;
+}
+
+/* 오른쪽 메뉴 */
 .right-menu {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 20;
+  /* margin-right: 100px; */
 }
 
-.ham {
-  font-size: 26px;
+.right-menu img {
+  width: 22px;
   cursor: pointer;
 }
 
-/******************************************
-  서브메뉴 전체 배경
-******************************************/
-.sub-bg {
-  position: absolute;
-  top: 80px; /* header-inner 높이 밑 */
-  left: 0;
-  width: 100%;
-  background: #fff;
-  border-top: 1px solid #eee;
+.right-menu .ham {
+  font-size: 26px;
+  cursor: pointer;
 
-  height: 0; /* ⭐ 수정 */
-  overflow: hidden; /* ⭐ 추가 */
-  transition: height 0.25s ease; /* ⭐ 추가 */
-  padding: 0; /* ⭐ 변경 */
+  font-weight: 600;
 }
 
-.sub-bg.active {
-  /* display: block; */
-  height: 260px; /* ⭐ 변경 (빙그레 기준) */
-  padding: 30px 0; /* ⭐ active일 때만 패딩 */
-}
-
-/******************************************
-  서브메뉴 내부
-******************************************/
-.sub-inner {
-  width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  gap: 80px;
-
-  align-items: flex-start; /* ⭐ 추가 */
-}
-
-/******************************************
-  개별 서브메뉴
-******************************************/
-.sub-menu {
-  min-width: 160px; /* 줄바꿈 방지 */
-
-  display: flex; /* ⭐ 변경 */
-  flex-direction: column; /* ⭐ 추가 */
-  gap: 10px; /* ⭐ 추가 */
-  white-space: nowrap;
-}
-
-.sub-menu.active {
-  display: flex;
-}
-
-.sub-menu li a {
-  display: block;
-  padding: 6px 0;
-  font-size: 16px;
-  white-space: nowrap; /* 줄바꿈 방지 */
-}
-
-/* sec01 전체를 기준점으로 만들기 */
-.sec01 {
-  position: relative;
-  width: 100%;
-}
+/*---------헷갈림 방지 선-------------*/
 
 /* 배경 이미지 */
 .bg {
