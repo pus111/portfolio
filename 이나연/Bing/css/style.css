@@ -531,3 +531,146 @@ a {
   cursor: pointer;
   margin-top: 10px;
 }
+
+/*--------------- 헷갈림 방지 선 -------------*/
+
+/*---- 네번째 섹션----*/
+
+/* 전체 박스 */
+.section4 {
+  width: 100%;
+  padding: 80px 0;
+  background: url("../imgs/pc_section02_3.jpg");
+}
+
+.qna_box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 섹션 제목 */
+.sec_tit {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 이메일 / 전화전체 박스 */
+.counsel_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 이메일 상담 박스 */
+.email_box {
+  width: 500px;
+  height: 230px;
+  background: url("../imgs/sec04_backimg01.png") no-repeat right bottom;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.email_box h4 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: "Binggre";
+}
+
+.email_box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.email_box p span {
+  display: block;
+  margin-top: 8px;
+  color: #666;
+  font-size: 100%;
+}
+
+/* 상담하기 버튼 */
+.email_box .boubtn {
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: linear-gradient(to top, #ed1c24, #e0462e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email_box .boubtn a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* 전화상담 박스 */
+.phone_box {
+  width: 500px;
+  background: url("../imgs/sec04_backimg02.png") no-repeat right bottom;
+  padding: 40px 40px 50px;
+  border-radius: 20px;
+  height: 230px;
+}
+
+.phone_box h4 {
+  font-family: "Binggre";
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.phone_box .phone {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.phone_box .time {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  padding-top: 25px;
+  line-height: 1;
+}
+
+.phone_box .time span {
+  font-weight: 700;
+  display: block;
+  margin-left: 15px;
+  color: #e0462e;
+  font-weight: 500;
+}
+
+/* 아래 안내 박스 */
+.flex_box {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_box h4 {
+  font-size: 18px;
+  color: #333;
+}
+
+.qna_but {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+}
