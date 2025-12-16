@@ -42,6 +42,9 @@ a {
   background: #fff;
   position: relative;
   z-index: 100;
+
+  background: transparent;
+  transition: background 0.3s ease, height 0.3s ease;
 }
 
 .inner {
@@ -66,13 +69,15 @@ a {
 /*----------- 메뉴-서브메뉴 -------------- */
 .menu {
   position: relative;
+  /* background: #fff; */
 }
 
 /* 1차 메뉴 */
 .menu > ul {
   display: flex;
-  width: 600px;
+  width: 1000px;
   height: 50px;
+  /* margin: 40px; */
 }
 
 .menu > ul > li {
@@ -85,6 +90,13 @@ a {
   display: block;
   height: 100%;
   line-height: 50px;
+  font-size: 20px;
+}
+
+/* 메뉴 hover 시 헤더 전체 확장 + 흰 배경 */
+.header:hover {
+  background: #fff;
+  height: 200px; /* ⭐ 헤더 + 서브메뉴 높이 */
 }
 
 /* ===== 서브메뉴 (전체 배경 영역) ===== */
@@ -96,9 +108,12 @@ a {
   height: 0;
   background: #fff;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+
   z-index: 10;
+
+  /* padding: 20px 0 30px; */
   padding-left: calc(50% - 300px);
+  transition: max-height 0.3s ease;
 }
 
 /* ===== 서브메뉴 실제 내용 ===== */
@@ -115,9 +130,13 @@ a {
   text-align: left;
 }
 
+.menu .sub ul li {
+  margin-bottom: 5px; /* 원하는 간격 */
+}
+
 /* hover 시 열기 */
 .menu > ul:hover > li .sub {
-  height: 100px;
+  height: 300px;
 }
 
 /* 상단 메뉴 hover */
