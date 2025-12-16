@@ -63,11 +63,11 @@ a {
   display: block;
 }
 
-/* 메뉴 중앙 */
+/* 메뉴 중앙
 .gnb {
   flex: 1;
   display: flex;
-  justify-content: center; /* 메뉴 중앙 */
+  justify-content: center; 
 }
 
 .gnb > ul {
@@ -91,15 +91,13 @@ a {
   display: block;
 
   position: relative;
-
-  /* line-height: 1; */
 }
 
 .gnb > ul > li:hover > a {
   color: #e60012;
 }
 
-/* 서브 메뉴 */
+
 .sub {
   position: absolute;
   top: 90px;
@@ -128,14 +126,14 @@ a {
   color: #e60012;
 }
 
-/* hover 시 서브 메뉴 표시 */
+
 .gnb > ul > li:hover .sub {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-/*  전체 서브 배경*/
+
 .sub-bg {
   position: absolute;
   top: 90px;
@@ -153,6 +151,77 @@ a {
   height: 260px;
   opacity: 1;
 }
+ */
+
+/*----------- 메뉴-서브메뉴 -------------- */
+.menu {
+  position: relative;
+}
+
+/* 1차 메뉴 */
+.menu > ul {
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+
+.menu > ul > li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.menu > ul > li > a {
+  display: block;
+  height: 100%;
+  line-height: 50px;
+}
+
+/* ===== 서브메뉴 (전체 배경 영역) ===== */
+.menu > ul > li .sub {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 10;
+  padding-left: calc(50% - 300px);
+}
+
+/* ===== 서브메뉴 실제 내용 ===== */
+.menu > ul > li .sub > li {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.menu > ul > li .sub > li > a {
+  display: block;
+  line-height: 34px;
+  padding: 4px 0;
+  color: #000;
+  text-align: left;
+}
+
+/* hover 시 열기 */
+.menu > ul:hover > li .sub {
+  height: 100px;
+}
+
+/* 상단 메뉴 hover */
+.menu > ul > li:hover > a {
+  color: red;
+}
+
+/* 서브 hover */
+.menu > ul > li .sub a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* 메뉴-서브메뉴 끝 */
 
 /* 오른쪽 메뉴 */
 .right-menu {

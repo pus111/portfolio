@@ -50,7 +50,8 @@
     font-size: 5vw;
   }
   .about-sub p {
-    font-size: 4vw;
+    /* font-size: 4vw; */
+    font-size: 3.5vw;
   }
   .Program_tools img {
     width: 13%;
@@ -89,9 +90,11 @@
     font-weight: 600;
   }
   .projecte_txt p {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
   }
   .end p {
-    font-size: 9vw;
+    font-size: 4vw;
+    text-align: center;
+    align-items: center;
   }
 }
