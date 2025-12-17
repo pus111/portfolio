@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>빙그레</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -147,6 +147,7 @@
 
   </ul>
 </div>
+
     <!-- 4. 오른쪽 메뉴 -->
     <div class="right-menu">
       <a href="#">KR</a>
@@ -160,38 +161,137 @@
     <div class="header-bg"></div>
    </header>
 
-    <!------ 헷갈림 방지 선----- -->
+   <!------ 헷갈림 방지 선----- -->
 
-    <!-- 햄버거 매뉴 on
-    <nav class="hamberger_menu_on">
-      <div class="black_bg"></div>
 
-      <div class="hm_container">
-        <div class="hm_sec01">
-          <ul class="flex_center">
-            <li><a href="#">구매포털시스템</a></li>
-            <li><img src="./imgs/link_arrow02.png" alt="arrow1" /></li>
+<!-- ===============================
+  햄버거 전체 메뉴 레이어
+================================ -->
+<div class="all_menu">
 
-            <li><a href="#">인재채용</a></li>
-            <li><img src="./imgs/link_arrow03.png" alt="arrow2" /></li>
-          </ul>
-          <button class="hm_close">
-            <img src="./imgs/ham_close.png" alt="햄버거 닫기">
-          </button>
-        </div>
-        <div class="hm_sec02">
-          <ul class="depth01">
+  <!-- ✅ 햄버거 전용 상단 -->
+<div class="all_menu_top">
 
-          </ul>
-        </div>
-      </div>
-    </nav> -->
+  <!-- 🔹 위 : 구매포털 / 인재채용 -->
+  <div class="top_row">
+    <ul class="center">
+      <li><a href="#">구매포털시스템</a></li>
+      <li><img src="./imgs/link_arrow02.png" alt=""></li>
+      <li><a href="#">인재채용</a></li>
+      <li><img src="./imgs/link_arrow03.png" alt=""></li>
+    </ul>
+  </div>
 
-    <!------ 헷갈림 방지 선----- -->
+  <!-- 🔸 회색 구분선 -->
+  <div class="menu_divider"></div>
 
-    <!------ 헷갈림 방지 선----- -->
+  <!-- 🔹 아래 : 로고 / 언어 / X -->
+  <div class="bottom_row">
+    <h1 class="menu_logo">
+      <img src="./imgs/logo.png" alt="빙그레">
+    </h1>
 
-    <!--첫번째 섹션-->
+    <div class="bottom_util">
+      <span>KR</span>
+      <img src="./imgs/lang_btn.png" alt="">
+      <p class="menu_close">
+        <img src="./imgs/ham_close.png" alt="닫기">
+      </p>
+    </div>
+  </div>
+
+</div>
+
+  <!-- ✅ 햄버거 상단 끝 -->
+
+  <!-- 메뉴 내용 -->
+  <div class="all_menu_inner">
+    <div class="all_gnb">
+
+  <div class="gnb_item">
+    <h3 class="gnb_title">회사소개</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">경영이념</a></li>
+      <li><a href="#">사업분야</a></li>
+      <li><a href="#">히스토리</a></li>
+      <li><a href="#">CEO 인사말</a></li>
+      <li><a href="#">사업장소개</a></li>
+    </ul>
+  </div>
+  <div class="gnb_item">
+    <h3 class="gnb_title">제품소개</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">아이스크림</a></li>
+      <li><a href="#">우유/치즈</a></li>
+      <li><a href="#">발효유</a></li>
+      <li><a href="#">커피</a></li>
+      <li><a href="#">쥬스</a></li>
+      <li><a href="#">음료</a></li>
+      <li><a href="#">스낵/디저트</a></li>
+      <li><a href="#">건강지향</a></li>
+      <li><a href="#">수출제품</a></li>
+    </ul>
+  </div>
+
+  <div class="gnb_item">
+    <h3 class="gnb_title">지속가능경영</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">지속가능경영 체계</a></li>
+      <li><a href="#">Eco-Friendly</a></li>
+      <li><a href="#">Shared Value</a></li>
+      <li><a href="#">Global Integrity</a></li>
+      <li><a href="#">윤리준법경영</a></li>
+      <li><a href="#">사회공헌</a></li>
+      <li><a href="#">보고서 및 정책</a></li>
+    </ul>
+  </div>
+
+  <div class="gnb_item">
+    <h3 class="gnb_title">투자정보</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">재무정보</a></li>
+      <li><a href="#">주식정보</a></li>
+      <li><a href="#">전자공고</a></li>
+      <li><a href="#">공시정보</a></li>
+      <li><a href="#">IR자료실</a></li>
+    </ul>
+  </div>
+
+  <div class="gnb_item">
+    <h3 class="gnb_title">뉴스룸</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">전체보기</a></li>
+      <li><a href="#">새소식</a></li>
+      <li><a href="#">보도자료</a></li>
+      <li><a href="#">빙그레 스토리</a></li>
+      <li><a href="#">미디어라이브러리</a></li>
+    </ul>
+  </div>
+
+  <div class="gnb_item">
+    <h3 class="gnb_title">고객센터</h3>
+    <ul class="gnb_sub">
+      <li><a href="#">고객상담</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">1:1문의하기</a></li>
+      <li><a href="#">제품공급문의</a></li>
+      <li><a href="#">사이버신고센터</a></li>
+      <li><a href="#">안전신문고</a></li>
+      <li><a href="#">개인청보처리방침</a></li>
+    </ul>
+  </div>
+
+  </div>
+  </div>
+
+</div>
+<!-- ★ 햄버거 전체 메뉴 끝 ★ -->
+
+
+      <!------ 헷갈림 방지 선----- -->
+
+    <!-- 첫번째 섹션 -->
+    <section class="sec01">
 
       <!-- 배경 이미지 -->
       <section class="sec01">

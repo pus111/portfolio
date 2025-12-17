@@ -2,21 +2,48 @@
 
 // 햄버거 클릭 시 메뉴 토글
 const ham = document.querySelector(".ham");
-const gnb = document.querySelector(".gnb");
+const allMenu = document.querySelector(".all_menu");
+const closeBtn = document.querySelector(".menu_close");
 
 ham.addEventListener("click", () => {
-  gnb.classList.toggle("open");
+  allMenu.classList.add("active");
 });
 
-// 모바일용 서브 메뉴 클릭 열기 (선택사항)
-document.querySelectorAll(".gnb > ul > li > a").forEach((menu) => {
-  menu.addEventListener("click", (e) => {
-    const parentLi = e.target.parentElement;
-    const sub = parentLi.querySelector(".sub");
-    if (sub) {
-      e.preventDefault();
-      sub.classList.toggle("open");
-    }
+closeBtn.addEventListener("click", () => {
+  allMenu.classList.remove("active");
+});
+
+/*----------------- 헷갈림 방지선 -----------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const allMenu = document.querySelector(".all_menu");
+  const closeBtn = document.querySelector(".menu_close");
+
+  hamburger.addEventListener("click", function () {
+    allMenu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    allMenu.classList.remove("active");
+  });
+});
+
+/*----------------- 헷갈림 방지선 -----------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerBtn = document.querySelector(".hamburger");
+  const allMenu = document.querySelector(".all_menu");
+  const closeBtn = document.querySelector(".menu_close");
+
+  // 햄버거 버튼 클릭 → 전체메뉴 열기
+  hamburgerBtn.addEventListener("click", function () {
+    allMenu.classList.add("active");
+  });
+
+  // X 버튼 클릭 → 전체메뉴 닫기
+  closeBtn.addEventListener("click", function () {
+    allMenu.classList.remove("active");
   });
 });
 
