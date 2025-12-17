@@ -177,6 +177,8 @@ a {
 
 /* 메뉴-서브메뉴 끝 */
 
+/*---------헷갈림 방지 선-------------*/
+
 /* 오른쪽 메뉴 */
 .right-menu {
   display: flex;
@@ -188,38 +190,133 @@ a {
   margin-right: 100px;
 }
 
-.right-menu img {
-  width: 22px;
+/*---------헷갈림 방지 선-------------*/
+
+/* 햄버거 버튼 */
+.right-menu .ham {
+  width: 26px;
+  height: 18px;
+  position: relative;
   cursor: pointer;
 }
 
-.right-menu .ham {
-  font-size: 26px;
+.right-menu .ham span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transition: all 0.3s ease;
+}
+
+.right-menu .ham span:nth-child(1) {
+  top: 0;
+}
+
+.right-menu .ham span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-menu .ham span:nth-child(3) {
+  bottom: 0;
+}
+
+.ham {
+  width: 26px;
+  height: 18px;
+  position: relative;
   cursor: pointer;
-  font-weight: 600;
+}
+
+.ham span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transition: all 0.4s ease;
+}
+
+.ham span:nth-child(1) {
+  top: 0;
+}
+.ham span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ham span:nth-child(3) {
+  bottom: 0;
+}
+
+/* 메뉴 열렸을 때 X로 변경 */
+.all_menu.active ~ .right-menu .ham span:nth-child(1),
+.all_menu.active .ham span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.all_menu.active ~ .right-menu .ham span:nth-child(2),
+.all_menu.active .ham span:nth-child(2) {
+  opacity: 0;
+}
+
+.all_menu.active ~ .right-menu .ham span:nth-child(3),
+.all_menu.active .ham span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /*---------헷갈림 방지 선-------------*/
+
+/*햄버거 닫기 버튼*/
+.menu_close {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu_close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+}
+
+.menu_close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu_close span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu_close span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/*---------헷갈림 방지 선-------------*/
+
 /* ===============================
    햄버거 전체 메뉴 레이어
 ================================ */
 .all_menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  inset: 0;
   background: #fff;
   z-index: 9999;
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s ease;
+  transform: translateY(30px);
+  transition: all 0.45s ease;
 }
 
 .all_menu.active {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
 /* ===============================

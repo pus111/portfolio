@@ -1,32 +1,21 @@
 /*----------------- 헷갈림 방지선 -----------------*/
 
-// 햄버거 클릭 시 메뉴 토글
-const ham = document.querySelector(".ham");
-const allMenu = document.querySelector(".all_menu");
-const closeBtn = document.querySelector(".menu_close");
+document.addEventListener("DOMContentLoaded", () => {
+  const ham = document.querySelector(".ham");
+  const menu = document.querySelector(".all_menu");
+  const close = document.querySelector(".menu_close");
 
-ham.addEventListener("click", () => {
-  allMenu.classList.add("active");
-});
+  if (ham && menu) {
+    ham.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+  }
 
-closeBtn.addEventListener("click", () => {
-  allMenu.classList.remove("active");
-});
-
-/*----------------- 헷갈림 방지선 -----------------*/
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const allMenu = document.querySelector(".all_menu");
-  const closeBtn = document.querySelector(".menu_close");
-
-  hamburger.addEventListener("click", function () {
-    allMenu.classList.add("active");
-  });
-
-  closeBtn.addEventListener("click", function () {
-    allMenu.classList.remove("active");
-  });
+  if (close && menu) {
+    close.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  }
 });
 
 /*----------------- 헷갈림 방지선 -----------------*/
