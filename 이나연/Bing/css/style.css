@@ -36,17 +36,31 @@ a {
 /*--------------- 헷갈림 방지 선 -------------*/
 
 /*헤드 메뉴부분 시작*/
-
 .header {
-  width: 100%;
-  background: #fff;
   position: relative;
-  z-index: 100;
-
-  background: transparent;
-  transition: background 0.3s ease, height 0.3s ease;
+  width: 100%;
 }
 
+/* .header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  transform: translateX(-50%);
+  z-index: 1;
+} */
+
+.header .inner {
+  position: relative;
+  z-index: 10; /* 🔼 배경보다 위 */
+}
+
+.header:hover::before {
+  height: 380px; /* 🔥 넉넉하게 */
+}
 .inner {
   /* max-width: 1380px; */
   width: 100%;
@@ -70,6 +84,7 @@ a {
 .menu {
   position: relative;
   /* background: #fff; */
+  z-index: 20;
 }
 
 /* 1차 메뉴 */
@@ -93,23 +108,18 @@ a {
   font-size: 20px;
 }
 
-/* 메뉴 hover 시 헤더 전체 확장 + 흰 배경 */
-.header:hover {
-  background: #fff;
-  height: 200px; /* ⭐ 헤더 + 서브메뉴 높이 */
-}
-
 /* ===== 서브메뉴 (전체 배경 영역) ===== */
 .menu > ul > li .sub {
   position: absolute;
   top: 50px;
   left: 0;
+  right: 0;
   width: 100%;
   height: 0;
   background: #fff;
   overflow: hidden;
 
-  z-index: 10;
+  z-index: 999;
 
   /* padding: 20px 0 30px; */
   padding-left: calc(50% - 300px);
@@ -117,21 +127,35 @@ a {
 }
 
 /* ===== 서브메뉴 실제 내용 ===== */
+.menu .sub {
+  position: absolute;
+  z-index: 30;
+}
 .menu > ul > li .sub > li {
   width: 600px;
   margin: 0 auto;
 }
 
-.menu > ul > li .sub > li > a {
+/* .menu > ul > li .sub > li > a {
   display: block;
   line-height: 34px;
   padding: 4px 0;
   color: #000;
   text-align: left;
-}
+} */
 
 .menu .sub ul li {
   margin-bottom: 5px; /* 원하는 간격 */
+}
+
+/*서브메뉴 텍스트 */
+.menu .sub .sub-inner ul li a {
+  display: block;
+  line-height: 1.5;
+  padding: 7px 0;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
 }
 
 /* hover 시 열기 */
@@ -146,8 +170,9 @@ a {
 
 /* 서브 hover */
 .menu > ul > li .sub a:hover {
-  font-weight: bold;
-  text-decoration: underline;
+  font-weight: 500;
+  /* text-decoration: underline; */
+  color: #e0462e;
 }
 
 /* 메뉴-서브메뉴 끝 */
@@ -543,6 +568,12 @@ a {
 .qna_box {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
+  padding: 60px 45px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  margin-bottom: 132px;
 }
 
 /* 섹션 제목 */
@@ -553,7 +584,7 @@ a {
   margin-bottom: 50px;
 }
 
-/* 이메일 / 전화전체 박스 */
+/* 이메일 , 전화전체 박스 */
 .counsel_box {
   display: flex;
   justify-content: space-between;
@@ -656,12 +687,13 @@ a {
 }
 
 .flex_box h4 {
-  font-size: 18px;
+  font-size: 28px;
   color: #333;
+  font-family: Binggre;
 }
 
 .qna_but {
-  width: 100px;
+  width: 160px;
   height: 40px;
   border-radius: 20px;
   border: 1px solid #ddd;
@@ -670,4 +702,113 @@ a {
   align-items: center;
   cursor: pointer;
   background: #fff;
+}
+
+.qna_list {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.qna_list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ⭐ 2열 */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* 카드 */
+.qna_list li {
+  height: 80px;
+  padding: 0 24px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 5px 10px rgba(121, 121, 121, 0.08);
+  cursor: pointer;
+  font-size: 18px;
+
+  /* ❌ 이 두 개 있으면 레이아웃 망가짐 */
+  width: auto;
+  margin-bottom: 0;
+}
+
+/* 텍스트 */
+.qna_list li p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.qna_list li span {
+  display: block;
+}
+
+/*--------------- 헷갈림 방지 선 -------------*/
+.foot {
+  padding: 40px 50px 30px;
+  background: #1b1b1b;
+}
+
+.foot > div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer_sec1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_sec1 ul a {
+  color: #e4e4e4;
+  font-size: 15px;
+}
+
+.footer_sec2 {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 0 50px;
+}
+.f_sec2_box2 ul li {
+  color: #e4e4e4;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer_sec3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright p {
+  font-size: 14px;
+  color: #ddd;
+}
+.sns_box ul {
+  display: flex;
+  align-items: center; /* 세로 가운데 */
+  gap: 16px; /* 아이콘 사이 간격 */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sns_box li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sns_box li img {
+  width: 20px;
+  height: auto;
 }
